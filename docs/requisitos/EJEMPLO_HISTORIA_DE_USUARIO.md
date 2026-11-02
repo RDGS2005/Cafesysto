@@ -10,6 +10,10 @@
 
 Alta
 
+## Versión
+
+v1.0
+
 ## Criterios de aceptación
 
 - [ ] El sistema muestra los productos disponibles.
