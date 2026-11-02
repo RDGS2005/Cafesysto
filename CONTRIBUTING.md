@@ -46,7 +46,7 @@ Para la ejecución de cada fase se consideró adecuado un periodo de 5 días com
 * Jorge Revelo - Historias de usuario del Módulo de Usuarios (Clientes + Personal)
 * Juan Chugá - Historias de usuario del Módulo de Productos (RU-01, RU-06)
 * Bryan Ayala - Historias de usuario del Módulo de Pedidos (RU-02, RU-03, RU-04, RU-05, RU-07)
-* Ricardo Garzón - Documentación de Ambiente + Flujo de Trabajo
+* Ricardo Garzón - Requisitos no funcionales + Flujo de Trabajo
 
 > El integrador revisará y unificará las historias de usuario
 
@@ -55,7 +55,7 @@ Para la ejecución de cada fase se consideró adecuado un periodo de 5 días com
 * Jorge Revelo - Diagrama de clases del Módulo de Usuarios
 * Juan Chugá - Diagrama de clases del Módulo de Productos
 * Bryan Ayala - Diagrama de clases del Módulo de Pedidos
-* Ricardo Garzón - Diagrama de Navegación + Prototipo de Interfaz
+* Ricardo Garzón - Diagrama de Navegación + Prototipo de Interfaz + Documentación de Ambiente
 
 > El integrador revisará y unificará el diagrama de clases
 
