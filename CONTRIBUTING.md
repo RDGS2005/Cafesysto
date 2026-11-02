@@ -97,9 +97,11 @@ Una vez completados los hitos en la rama *develop* se crea una rama para el *rel
 * doc/usuarios - Para requisitos, diseño y pruebas del Módulo de Usuarios
 * doc/productos - Para requisitos, diseño y pruebas del Módulo de Productos
 * doc/pedidos - Para requisitos, diseño y pruebas del Módulo de Pedidos
+* doc/soporte - Para requisitos, diseño y pruebas del integrador
 * feature/usuarios - Para código del Módulo de Usuarios
 * feature/productos - Para código del Módulo de Productos
 * feature/pedidos - Para código del Módulo de Pedidos
+* feature/soporte - Para código del integrador
 * release/* - Para preparar una versión funcional
 * hotfix/* - Para arreglos urgentes
 
@@ -129,9 +131,16 @@ gitGraph
     commit id: "Requisitos Pedidos"
 
     checkout develop
+
+    branch doc/soporte
+    checkout doc/soporte
+    commit id: "Requisitos Integrador"
+
+    checkout develop
     merge doc/usuarios
     merge doc/productos
     merge doc/pedidos
+    merge doc/soporte
 
     checkout doc/usuarios
     commit id: "Diseño Usuarios"
@@ -147,9 +156,15 @@ gitGraph
     commit id: "Diseño Pedidos"
 
     checkout develop
+
+    checkout doc/soporte
+    commit id: "Diseño Integrador"
+
+    checkout develop
     merge doc/usuarios
     merge doc/productos
     merge doc/pedidos
+    merge doc/soporte
 
     branch feature/usuarios
     checkout feature/usuarios
@@ -168,9 +183,16 @@ gitGraph
     commit id: "Implementación Pedidos"
 
     checkout develop
+
+    branch feature/soporte
+    checkout feature/soporte
+    commit id: "Implementación Integrador"
+
+    checkout develop
     merge feature/usuarios
     merge feature/productos
     merge feature/pedidos
+    merge feature/soporte
 
     checkout doc/usuarios
     commit id: "Pruebas Usuarios"
@@ -186,9 +208,15 @@ gitGraph
     commit id: "Pruebas Pedidos"
 
     checkout develop
+
+    checkout doc/soporte
+    commit id: "Pruebas Integrador"
+
+    checkout develop
     merge doc/usuarios
     merge doc/productos
     merge doc/pedidos
+    merge doc/soporte
 
     branch release/1.0.0
     checkout release/1.0.0
