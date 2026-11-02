@@ -20,7 +20,7 @@ En este documento se describe la forma en la que se va a trabajar las contribuci
     - [18-11-2026 (Implementación)](#18-11-2026-implementación)
     - [23-11-2026 (Pruebas y Despliegue)](#23-11-2026-pruebas-y-despliegue)
   - [Gitflow](#gitflow)
-    - [Ramas a Utilizar](#ramas-a-utilizar)
+    - [Estrategia de Ramificación](#estrategia-de-ramificación)
     - [Diagrama de Gitflow](#diagrama-de-gitflow)
   - [Pull Requests](#pull-requests)
   - [Reglas de Trazabilidad y Consistencia](#reglas-de-trazabilidad-y-consistencia)
@@ -90,7 +90,7 @@ Para completar cada hito se seguirá la siguiente secuencia por cada integrante:
 
 Una vez completados los hitos en la rama *develop* se crea una rama para el *release* y se combina a la rama *main*.
 
-### Ramas a Utilizar
+### Estrategia de Ramificación
 
 * main - Para versiones funcionales
 * develop - Para cada hito
@@ -134,17 +134,17 @@ gitGraph
     merge doc/pedidos
 
     checkout doc/usuarios
-    commit id: "Class Diagram Usuarios"
+    commit id: "Diseño Usuarios"
 
     checkout develop
 
     checkout doc/productos
-    commit id: "Class Diagram Productos"
+    commit id: "Diseño Productos"
 
     checkout develop
 
     checkout doc/pedidos
-    commit id: "Class Diagram Pedidos"
+    commit id: "Diseño Pedidos"
 
     checkout develop
     merge doc/usuarios
@@ -172,7 +172,23 @@ gitGraph
     merge feature/productos
     merge feature/pedidos
 
+    checkout doc/usuarios
+    commit id: "Pruebas Usuarios"
+
     checkout develop
+
+    checkout doc/productos
+    commit id: "Pruebas Productos"
+
+    checkout develop
+
+    checkout doc/pedidos
+    commit id: "Pruebas Pedidos"
+
+    checkout develop
+    merge doc/usuarios
+    merge doc/productos
+    merge doc/pedidos
 
     branch release/1.0.0
     checkout release/1.0.0
