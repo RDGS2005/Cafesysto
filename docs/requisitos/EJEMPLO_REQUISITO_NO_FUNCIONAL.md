@@ -16,10 +16,6 @@ Garantizar una experiencia de consulta fluida para los clientes.
 
 Medir el tiempo transcurrido desde la solicitud del menú hasta que la información se encuentre disponible en la interfaz.
 
-## Relación con requisitos funcionales
-
-- RU-01 — Consultar menú.
-
 ## Método de verificación
 
 Prueba de rendimiento.
