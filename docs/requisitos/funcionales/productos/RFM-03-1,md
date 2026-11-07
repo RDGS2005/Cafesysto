@@ -18,7 +18,7 @@ v1.1
 
 - [ ] El sistema permite seleccionar un producto existente del menú para su edición.
 - [ ] El sistema permite editar el precio del producto.
-- [ ] El personal puede cambiar el precio a un valor numérico mayor a 0.
+- [ ] El personal SOLO puede cambiar el precio a un valor numérico mayor a 0.
 - [ ] Si el producto se ha actualizado correctamente, el sistema muestra un mensaje de éxito y los cambios se ven reflejados en el menú que ven los clientes (RU-01).
 
 ## Reglas de negocio relacionadas

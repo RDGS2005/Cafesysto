@@ -17,7 +17,6 @@ v1.1
 ## Criterios de aceptación
 
 - [ ] El sistema permite seleccionar un producto existente del menú para su edición.
-- [ ] El sistema permite editar el estado de un producto.
 - [ ] El personal puede cambiar el estado de un producto de "Disponible" a "No disponible" o viceversa.
 - [ ] Si el producto se ha actualizado correctamente, el sistema muestra un mensaje de éxito y los cambios se ven reflejados en el menú que ven los clientes (RU-01).
 
