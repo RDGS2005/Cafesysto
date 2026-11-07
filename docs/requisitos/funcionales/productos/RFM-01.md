@@ -18,7 +18,7 @@ v1.1
 
 - [ ] El sistema muestra todos los productos marcados como "Disponible" primero.
 - [ ] Cada producto muestra su nombre y su precio.
-- [ ] Los productos no disponibles se muestran después de los productos disponibles con indicadores claros.
+- [ ] Los productos no disponibles no se muestran en el menú para evitar confusión con el cliente.
 - [ ] El menú muestra información actualizada.
 
 ## Reglas de negocio relacionadas
