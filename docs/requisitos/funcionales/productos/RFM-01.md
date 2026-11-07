@@ -1,4 +1,4 @@
-# RU-01 — Consultar menú de la cafetería
+# RFM-01 — Consultar menú de la cafetería
 
 ## Descripción
 
@@ -12,7 +12,7 @@ Alta
 
 ## Versión
 
-v1.0
+v1.1
 
 ## Criterios de aceptación
 

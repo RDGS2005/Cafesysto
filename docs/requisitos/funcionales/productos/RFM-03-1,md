@@ -1,10 +1,10 @@
-# RU-06 — Actualizar productos del menú
+# RFM-03-1 — Actualizar el precio de los productos del menú
 
 ## Descripción
 
 **Como** personal de la cafetería,  
-**quiero** editar la información de un producto existente del menú, sus precios y su disponibilidad,  
-**para** mantener el menú actualizado ante cambios de inventario o inflación.
+**quiero** editar el precio de un producto existente del menú,
+**para** mantener el menú actualizado ante la inflación.
 
 ## Prioridad
 
@@ -12,21 +12,18 @@ Alta
 
 ## Versión
 
-v1.0
+v1.1
 
 ## Criterios de aceptación
 
 - [ ] El sistema permite seleccionar un producto existente del menú para su edición.
-- [ ] El sistema permite editar los datos actuales del producto (nombre, precio, estado).
+- [ ] El sistema permite editar el precio del producto.
 - [ ] El personal puede cambiar el precio a un valor numérico mayor a 0.
-- [ ] El personal puede cambiar el estado de un producto de "Disponible" a "No disponible" o viceversa.
-- [ ] El sistema no permite actualizar un producto para que tenga el nombre exacto de otro producto.
 - [ ] Si el producto se ha actualizado correctamente, el sistema muestra un mensaje de éxito y los cambios se ven reflejados en el menú que ven los clientes (RU-01).
 
 ## Reglas de negocio relacionadas
 
 - RN-NEG-04: El precio registrado para un producto en un pedido no cambia si posteriormente se modifica el precio del menú.
-- Cambiar un producto a "No disponible" evita que se agregue a nuevos pedidos, pero no afecta a los pedidos creados anteriormente.
 
 ## Trazabilidad
 
@@ -37,4 +34,4 @@ v1.0
 
 ## Observaciones
 
-El sistema no permite cambiar el código de un producto.
+El sistema no permite cambiar el código ni el nombre de un producto.

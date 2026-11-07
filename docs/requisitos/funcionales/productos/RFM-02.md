@@ -1,4 +1,4 @@
-# RU-06 — Registrar productos en el menú
+# RFM-02 — Registrar productos en el menú
 
 ## Descripción
 

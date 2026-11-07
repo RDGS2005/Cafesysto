@@ -1,0 +1,37 @@
+# RFM-03-2 — Actualizar la disponibilidad de los productos del menú
+
+## Descripción
+
+**Como** personal de la cafetería,  
+**quiero** editar la disponibiliad de un producto existente en el menú,  
+**para** mantener el menú actualizado ante cambios de inventario.
+
+## Prioridad
+
+Alta
+
+## Versión
+
+v1.1
+
+## Criterios de aceptación
+
+- [ ] El sistema permite seleccionar un producto existente del menú para su edición.
+- [ ] El sistema permite editar el estado de un producto.
+- [ ] El personal puede cambiar el estado de un producto de "Disponible" a "No disponible" o viceversa.
+- [ ] Si el producto se ha actualizado correctamente, el sistema muestra un mensaje de éxito y los cambios se ven reflejados en el menú que ven los clientes (RU-01).
+
+## Reglas de negocio relacionadas
+
+- Cambiar un producto a "No disponible" evita que se agregue a nuevos pedidos, pero no afecta a los pedidos creados anteriormente.
+
+## Trazabilidad
+
+- Requisito relacionado: RU-06
+- Issue: #2
+- Pull Request: pendiente
+- Casos de prueba: Pendiente
+
+## Observaciones
+
+El sistema no permite cambiar el código ni el nombre de un producto.
