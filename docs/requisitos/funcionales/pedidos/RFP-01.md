@@ -16,7 +16,8 @@ v1.0
 
 ## Criterios de aceptación
 
-- [ ] Al seleccionar un producto, este aparece en la selección del cliente.
+- [ ] Al seleccionar un producto disponible, este aparece en la selección del cliente.
+- [ ] Si un producto está marcado como no disponible, el cliente no puede añadirlo a la selección.
 - [ ] Al indicar la cantidad de un producto seleccionado, el sistema la muestra junto a ese producto.
 - [ ] Al añadir otro producto, se conservan los productos ya seleccionados y sus cantidades.
 

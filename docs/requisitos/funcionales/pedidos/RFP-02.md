@@ -12,17 +12,16 @@ Alta
 
 ## Versión
 
-v1.0
+v1.1
 
 ## Criterios de aceptación
 
-- [ ] Una vez comprobada la disponibilidad de los productos seleccionados, el cliente ve el importe total antes de confirmar el pedido.
+- [ ] Al revisar una selección válida, el cliente ve el importe total antes de confirmar el pedido.
 - [ ] El importe mostrado es la suma del precio vigente de cada producto seleccionado multiplicado por su cantidad.
 
 ## Reglas de negocio relacionadas
 
 - RN-NEG-01: Un pedido debe incluir al menos un producto y cada cantidad debe ser un número entero positivo.
-- RN-NEG-02: Solo los productos marcados como disponibles pueden incluirse en nuevos pedidos.
 - RN-NEG-03: El importe total de un pedido corresponde a la suma del precio vigente de cada producto multiplicado por su cantidad. 
 
 ## Trazabilidad
