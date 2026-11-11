@@ -1,4 +1,4 @@
-# RFU-04 — Consulta y validación de usuarios Personal en la base de datos
+# RFU-04 — Ingreso al sistema con usuario Personal 
 
 ## Descripción
 

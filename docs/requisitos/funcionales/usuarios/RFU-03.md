@@ -1,4 +1,4 @@
-# RFU-03 — Registrar cuenta Personal
+# RFU-03 — Registrar usuario Personal
 
 ## Descripción
 

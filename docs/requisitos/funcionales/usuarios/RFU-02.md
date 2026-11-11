@@ -1,9 +1,9 @@
-# RFU-02 — Consulta y validación de usuarios Cliente en la base de datos
+# RFU-02 — Ingreso al sistema con usuario Cliente 
 
 ## Descripción
 
 **Como** cliente registrado de la cafetería,  
-**quiero** que el sistema consulte y valide mis datos en la base de datos al ingresar,  
+**quiero** que el sistema consulte y valide mis datos en la base de datos al ingresar, 
 **para** acceder de forma segura a mis pedidos y realizar nuevos pedidos con mi identidad.
 
 ## Prioridad

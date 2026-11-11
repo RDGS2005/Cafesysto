@@ -1,4 +1,4 @@
-# RFU-01 — Registrar cuenta Cliente
+# RFU-01 — Registrar usuario Cliente
 
 ## Descripción
 
@@ -34,7 +34,7 @@ v1.0
 
 ## Trazabilidad
 
-- Requisito relacionado: RU-04 (código de identificación)
+- Requisito relacionado: N/A (decisión técnica)
 - Issue: #1
 - Pull Request: Pendiente
 - Casos de prueba: Pendiente
