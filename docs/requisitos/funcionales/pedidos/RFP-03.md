@@ -32,11 +32,11 @@ v1.1
 
 ## Trazabilidad
 
-- Requisito relacionado: RU-04
+- Origen: RU-04
 - Issue: #4
-- Pull Request: Pendiente
+- Pull Request: #7
 - Casos de prueba: Pendiente
 
 ## Observaciones
 
-Se debe decidir si la aplicación permitirá editar la selección de productos en el pedido una vez el cliente se ha movido a la revisión del importe total, ya que no se menciona como un requisito pero podría aportar valor al usuario. 
+Se debe decidir si la aplicación permitirá editar la selección de productos en el pedido una vez el cliente se ha movido a la revisión del importe total, ya que no se menciona como un requisito pero podría aportar valor al usuario.

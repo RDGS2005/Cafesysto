@@ -12,6 +12,10 @@ Rendimiento.
 
 Garantizar una experiencia de consulta fluida para los clientes.
 
+## Versión
+
+v1.0
+
 ## Criterio de verificación
 
 Medir el tiempo transcurrido desde la solicitud del menú hasta que la información se encuentre disponible en la interfaz.
