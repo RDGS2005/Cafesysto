@@ -12,6 +12,10 @@ Mantenibilidad.
 
 Reducir el riesgo de introducir defectos y facilitar el mantenimiento y la evolución del software.
 
+## Versión
+
+v1.0
+
 ## Criterio de verificación
 
 Métrica *Line Coverage* igual o superior al 80 %.
@@ -19,3 +23,10 @@ Métrica *Line Coverage* igual o superior al 80 %.
 ## Método de verificación
 
 * Análisis estático de código.
+
+## Trazabilidad
+
+- Origen: Equipo 6
+- Issue: #3
+- Pull Request: #6
+- Casos de prueba: Pendiente 

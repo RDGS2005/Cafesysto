@@ -32,9 +32,11 @@ v1.0
 
 ## Trazabilidad
 
-- Requisito relacionado: RU-06
+- Origen: RU-06
 - Issue: #2
-- Pull Request: pendiente
+- Pull Request: #8
 - Casos de prueba: Pendiente
 
 ## Observaciones
+
+Ninguna.
