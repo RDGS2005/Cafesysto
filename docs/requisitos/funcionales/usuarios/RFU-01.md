@@ -12,7 +12,7 @@ Alta
 
 ## Versión
 
-v1.0
+v1.1
 
 ## Criterios de aceptación
 
