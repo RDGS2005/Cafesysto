@@ -31,9 +31,9 @@ N/A (decisión técnica).
 
 ## Trazabilidad
 
-- Requisito relacionado: N/A (decisión técnica).
+- Origen: Equipo 6
 - Issue: #1
-- Pull Request: Pendiente
+- Pull Request: #9
 - Casos de prueba: Pendiente
 
 ## Observaciones

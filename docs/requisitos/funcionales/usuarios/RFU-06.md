@@ -29,9 +29,9 @@ N/A (decisión técnica).
 
 ## Trazabilidad
 
-- Requisito relacionado: N/A (decisión técnica).
+- Origen: Equipo 6
 - Issue: #1
-- Pull Request: Pendiente
+- Pull Request: #9
 - Casos de prueba: Pendiente 
 
 ## Observaciones
@@ -39,5 +39,3 @@ N/A (decisión técnica).
 - El sistema cuenta con credenciales predeterminadas (usuario y contraseña) para el usuario Administrador. 
 - Al iniciar sesión por primera vez con las credenciales predeterminadas, el sistema exigirá al Administrador el cambio obligatorio de su contraseña.
 - Las credenciales predeterminadas estarán documentadas en el manual de instalación.
-
-

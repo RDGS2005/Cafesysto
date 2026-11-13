@@ -28,7 +28,7 @@ v1.0
 
 ## Trazabilidad
 
-- Requisito relacionado: RU-01
+- Origen: RU-01
 - Issue: #1
 - Pull Request: #2
 - Casos de prueba: Pendiente
