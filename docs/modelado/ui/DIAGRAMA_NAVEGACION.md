@@ -13,7 +13,7 @@ stateDiagram-v2
 
     InicioSesion --> PanelCliente: Autenticación de Cliente exitosa
 
-    InicioSesion --> Registro : Registrarse
+    InicioSesion --> RegistroCliente : Registrarse
 
     PanelPersonal --> GestionPedidos
 
@@ -21,11 +21,11 @@ stateDiagram-v2
 
     PanelCliente --> Menu
 
-    PanelCliente --> DetallePedido
+    PanelCliente --> Pedido
 
-    Menu --> DetallePedido
+    Menu --> Pedido
 
-    PanelAdministrador --> RegistrarPersonal
+    PanelAdministrador --> RegistroPersonal
 
     PanelAdministrador --> ActualizacionCredenciales
 
@@ -33,7 +33,7 @@ stateDiagram-v2
 
 ## Versión
 
-v1.0
+v1.1
 
 ## Trazabilidad
 
