@@ -1,6 +1,6 @@
 # Ambiente de Desarrollo
 
-Versión: v1.0
+Versión: v1.1
 Autor: Equipo 6
 
 En este documento se describe el entorno para el desarrollo del proyecto.
@@ -36,6 +36,7 @@ Para el desarrollo es necesario contar con las siguientes herramientas:
 | Maven | 3.9 o superior |
 | VS Code | 1.146 o superior |
 | PostgreSQL | 18 o superior |
+| Docker Engine | 29 o superior |
 
 ## Configuración del entorno
 
