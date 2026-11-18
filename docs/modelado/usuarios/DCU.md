@@ -165,10 +165,7 @@ v1.0
 ## Trazabilidad
 
 - Issue: #11
-- Pull Request: Pendiente
-- Requisitos: [RFU-01 v1.1](../../requisitos/funcionales/usuarios/RFU-01.md), [RFU-02 v2.0](../../requisitos/funcionales/usuarios/RFU-02.md), [RFU-04 v2.0](../../requisitos/funcionales/usuarios/RFU-04.md), [RFU-05 v1.0](../../requisitos/funcionales/usuarios/RFU-05.md) y [RFU-06 v1.0](../../requisitos/funcionales/usuarios/RFU-06.md).
-- Modularidad: [RNF-05 v1.0](../../requisitos/nofuncionales/RNF-05.md).
-- Integración: [RFP-04](../../requisitos/funcionales/pedidos/RFP-04.md), [RFP-05-1](../../requisitos/funcionales/pedidos/RFP-05-1.md), [RFM-02](../../requisitos/funcionales/productos/RFM-02.md), [RFM-03-1](../../requisitos/funcionales/productos/RFM-03-1.md) y [RFM-03-2](../../requisitos/funcionales/productos/RFM-03-2.md).
+- Pull Request: #20
 
 ## Observaciones
 

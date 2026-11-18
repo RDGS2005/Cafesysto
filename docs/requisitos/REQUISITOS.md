@@ -35,6 +35,7 @@ El presente documento sirve como un índice de los requisitos del sistema inform
   - [Requisitos No Funcionales](#requisitos-no-funcionales)
   - [Identificación y Versionamiento de Requisitos](#identificación-y-versionamiento-de-requisitos)
   - [Matriz de Trazabilidad](#matriz-de-trazabilidad)
+  - [Trazabilidad](#trazabilidad)
 
 ## Contexto
 
@@ -228,3 +229,8 @@ El propósito de este módulo es gestionar los pedidos, permitir el registro de 
 | RNF-04 | v1.0 | Todos | Equipo 6 | 3 | 6 | Pendiente |
 | RNF-05 | v1.0 | Todos | Equipo 6 | 3 | 6 | Pendiente |
 | RNF-06 | v1.0 | Todos | Equipo 6 | 3 | 6 | Pendiente |
+
+## Trazabilidad
+
+- Issue: #5
+- Pull Request: #10
