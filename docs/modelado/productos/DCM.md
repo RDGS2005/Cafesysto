@@ -87,7 +87,7 @@ v1.0
 ## Trazabilidad
 
 - Issue: #12
-- Pull Request: Pendiente
+- Pull Request: #16
 
 ## Observaciones
 
