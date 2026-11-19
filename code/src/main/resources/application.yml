@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: cafeteria
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/cafeteria_db}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:postgres}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none   # el esquema se crea manualmente con el ddl
+
+server:
+  port: 8080
