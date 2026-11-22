@@ -12,12 +12,12 @@ Alta
 
 ## Versión
 
-v1.0
+v1.1
 
 ## Criterios de aceptación
 
 
-- [ ] El sistema solicita nombre, apellido, cédula, celular y correo del Personal. 
+- [ ] El sistema solicita nombre, apellido, cédula, celular, correo y contraseña del Personal. 
 - [ ] Todos los campos son obligatorios; si falta alguno, el registro no se completa y se indica el campo faltante.
 - [ ] El sistema valida el formato de la cédula, del celular y del correo institucional.
 - [ ] No se permite registrar una cédula o un correo que ya exista en el sistema.

@@ -1,4 +1,6 @@
 package ec.edu.cafeteria.usuarios.dto;
 
-public record CambioClaveRequest(String actual, String nueva, String confirmacion) {
+import jakarta.validation.constraints.NotBlank;
+
+public record CambioClaveRequest(@NotBlank String actual, @NotBlank String nueva, @NotBlank String confirmacion) {
 }
