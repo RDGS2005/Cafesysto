@@ -163,6 +163,7 @@ El propósito de este módulo es gestionar a los usuarios del sistema, tanto cli
 * [RFU-01 v1.1 — Registrar usuario Cliente](./funcionales/usuarios/RFU-01.md)
 * [RFU-02 v2.0 — Ingreso al sistema con usuario Cliente](./funcionales/usuarios/RFU-02.md)
 * [RFU-04 v2.0 — Ingreso al sistema con usuario Personal](./funcionales/usuarios/RFU-04.md)
+* [RFU-05 v1.1 — Registrar Personal](./funcionales/usuarios/RFU-05.md)
 * [RFU-05 v1.0 — Registrar Personal](./funcionales/usuarios/RFU-05.md)
 * [RFU-06 v1.0 — Actualización de credenciales de Administrador](./funcionales/usuarios/RFU-06.md)
 
