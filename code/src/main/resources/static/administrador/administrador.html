@@ -113,6 +113,28 @@
             <small>&copy; 2026 Cafesysto. Todos los derechos reservados.</small>
         </div>
     </footer>
+    <script type="module">
+        import { redirectUser, logout, showView } from "../util.js";
+
+        (() => {
+
+            "use strict";
+
+            redirectUser();
+            // Elementos de Navegación
+            const navButtons = document.querySelectorAll(".header_button[data-view]");
+            const panels = document.querySelectorAll("[data-view-panel]");
+            const logoutButton = document.getElementById("logout-button");
+
+            navButtons.forEach(button => {
+                button.addEventListener("click", () => showView(panels, navButtons, button.dataset.view, { moveFocus: true }));
+            });
+
+            showView(panels, navButtons, "home");
+            logoutButton.addEventListener("click", () => logout());
+
+        })();
+    </script>
     <script type="module" src="administrador.js"></script>
 </body>
 </html>

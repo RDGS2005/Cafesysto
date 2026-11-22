@@ -1,18 +1,11 @@
-import {baseAPI, getUser, redirectUser, logout, findResponseErrors, showView} from "../util.js";
+import {baseAPI, getUser, findResponseErrors} from "../util.js";
 
 (() => {
     "use strict";
 
-    redirectUser();
-
     // APIs a utilizar
     const adminAPI = `${baseAPI}/auth/administrador`;
     const staffAPI = `${baseAPI}/usuarios/personal`;
-
-    // Elementos de navegación
-    const navButtons = document.querySelectorAll(".header_button[data-view]");
-    const panels = document.querySelectorAll("[data-view-panel]");
-    const logoutButton = document.getElementById("logout-button");
 
     // Registrar personal
     const staffForm = document.getElementById("staff-form");
@@ -30,14 +23,6 @@ import {baseAPI, getUser, redirectUser, logout, findResponseErrors, showView} fr
     const newPassword = document.getElementById("new-password");
     const confirmPassword = document.getElementById("confirm-password");
     const passwordStatus = document.getElementById("password-status");
-
-    navButtons.forEach(button => {
-        button.addEventListener("click", () => showView(panels, navButtons, button.dataset.view, { moveFocus: true }));
-    });
-
-    showView(panels, navButtons, "home");
-
-    logoutButton.addEventListener("click", () => logout());
 
     /**
      * Registra a personal
