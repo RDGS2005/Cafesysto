@@ -1,4 +1,4 @@
-import { baseAPI, getUser, logout, findResponseErrors, showView } from "../util.js";
+import { baseAPI, getUser, findResponseErrors} from "../util.js";
 
 (() => {
     "use strict";
@@ -33,6 +33,7 @@ import { baseAPI, getUser, logout, findResponseErrors, showView } from "../util.
         };
 
         try {
+            // Obtener permisos de usuario
             const user = getUser();
             if (!user) throw new Error("No está autorizado para hacer esto");
             const token = user.token;
@@ -73,7 +74,8 @@ import { baseAPI, getUser, logout, findResponseErrors, showView } from "../util.
         const li = document.createElement("li");
         li.className = "product-item";
         li.dataset.codigo = product.codigo;
-
+        
+        // Agregar los datos del producto
         const code = document.createElement("span");
         code.className = "product-code";
         code.textContent = product.codigo;
@@ -82,11 +84,13 @@ import { baseAPI, getUser, logout, findResponseErrors, showView } from "../util.
         name.className = "product-name";
         name.textContent = product.nombre;
 
+        // Formulario de cambio de precio del producto
         let priceCell;
         if (editingCode === product.codigo) {
             priceCell = document.createElement("form");
             priceCell.className = "price-form";
 
+            // Ingreso del nuevo precio del producto
             const input = document.createElement("input");
             input.className = "price-input";
             input.type = "number";
@@ -97,11 +101,13 @@ import { baseAPI, getUser, logout, findResponseErrors, showView } from "../util.
             input.value = product.precio.toFixed(2);
             input.setAttribute("aria-label", `Nuevo precio de ${product.nombre}`);
 
+            // Botón para guardar el nuevo precio del producto
             const save = document.createElement("button");
             save.type = "submit";
             save.className = "btn btn-small";
             save.textContent = "Guardar";
 
+            // Botón para cancelar el cambio de precio del producto
             const cancel = document.createElement("button");
             cancel.type = "button";
             cancel.className = "btn btn-small btn-secondary";
@@ -119,13 +125,15 @@ import { baseAPI, getUser, logout, findResponseErrors, showView } from "../util.
             priceCell.textContent = currency.format(product.precio);
         }
 
+        // Agregar etiqueta del estado del producto
         const badge = document.createElement("span");
         badge.className = `badge ${product.estado == "DISPONIBLE" ? "badge-yes" : "badge-no"}`;
         badge.textContent = product.estado == "DISPONIBLE" ? "Disponible" : "No disponible";
 
         const actions = document.createElement("div");
         actions.className = "product-actions";
-
+        
+        // Botón para cambiar precio del producto
         if (editingCode !== product.codigo) {
             const edit = document.createElement("button");
             edit.type = "button";
@@ -137,6 +145,7 @@ import { baseAPI, getUser, logout, findResponseErrors, showView } from "../util.
             actions.append(edit);
         }
 
+        // Botón para cambiar el estado del producto entre DISPONIBLE y NO DISPONIBLE
         const toggle = document.createElement("button");
         toggle.type = "button";
         toggle.className = "btn btn-small btn-secondary";
@@ -153,16 +162,26 @@ import { baseAPI, getUser, logout, findResponseErrors, showView } from "../util.
         return li;
     }
 
+    /**
+     * Genera las tarjetas de todos los productos
+     */
     function renderProducts() {
         productList.replaceChildren(...products.map(createProductItem));
         productsEmpty.hidden = products.length > 0;
     }
 
+    /**
+     * Obtiene una lista de todos los productos
+     * @requires fetch a http://localhost:8080/api/productos
+     */
     async function loadProducts() {
-        const user = getUser();
-        if (!user) throw new Error("No está autorizado para hacer esto");
-        const token = user.token;
         try {
+            // Obtener permisos de usuario
+            const user = getUser();
+            if (!user) throw new Error("No está autorizado para hacer esto");
+            const token = user.token;
+
+            // Enviar los datos a la API para el registro
             const response = await fetch(productAPI, {
                 method: "GET",
                 headers: {
@@ -173,16 +192,32 @@ import { baseAPI, getUser, logout, findResponseErrors, showView } from "../util.
 
             if (!response.ok) { await findResponseErrors(response) }
 
+            // Actualizar la lista de productos si no se produjeron errores
             products = await response.json();
             renderProducts();
             productsStatus.textContent = "";
 
         } catch (error) {
+            // Mostrar errores al usuario
             console.error("No se pudieron cargar los productos:", error);
             productsStatus.textContent = "No se pudieron cargar los productos. Inténtalo de nuevo más tarde.";
         }
     }
 
+    /**
+     * Busca un elemento de un producto en la lista por código
+     * @param {string} code código del producto
+     * @param {*} selector elemento a buscar
+     * @returns primer elemento encontrado
+     */
+    function findInProduct(code, selector) {
+        return productList.querySelector(`[data-code="${code}"] ${selector}`);
+    }
+
+    /**
+     * Empieza una operación de edición sobre un producto para cambiar precio o disponibilidad
+     * @param {string} code código del producto
+     */
     function startEdit(code) {
         editingCode = code;
         renderProducts();
@@ -193,6 +228,10 @@ import { baseAPI, getUser, logout, findResponseErrors, showView } from "../util.
         }
     }
 
+    /**
+     * Cancela una operación de edición sobre un producto para cambiar precio o disponibilidad
+     * @param {string} code código del producto
+     */
     function cancelEdit(code) {
         editingCode = null;
         renderProducts();
@@ -200,21 +239,28 @@ import { baseAPI, getUser, logout, findResponseErrors, showView } from "../util.
         if (button) button.focus();
     }
 
+    /**
+     * Convertir el precio en texto a precio en decimal
+     * @param {string} rawValue precio en texto
+     * @returns precio en decimal
+     */
     function parsePrice(rawValue) {
         if (rawValue.trim() === "") return null;
         const value = Number(rawValue);
         if (!Number.isFinite(value) || value < 0) return null;
         return Math.round(value * 100) / 100;
     }
-
-    function findInProduct(code, selector) {
-        return productList.querySelector(`[data-code="${code}"] ${selector}`);
-    }
-
+    
+    /**
+     * Cambia el precio de un producto
+     * @param {*} product producto a actualizar
+     * @param {string} input nuevo precio
+     */
     async function savePrice(product, input) {
         const price = parsePrice(input.value);
 
         try {
+            // Obtener permisos de usuario
             const user = getUser();
             if (!user) throw new Error("No está autorizado para hacer esto");
             const token = user.token;
@@ -243,10 +289,17 @@ import { baseAPI, getUser, logout, findResponseErrors, showView } from "../util.
         }
     }
 
+    /**
+     * Cambia la disponibilidad de un producto
+     * @param {*} product producto a actualizar
+     */
     async function toggleAvailability(product) {
+        // Obtener estado alterno
         const currentState = product.estado;
         const newState = currentState === "DISPONIBLE" ? "NO_DISPONIBLE" : "DISPONIBLE";
+
         try {
+            // Obtener permisos de usuario
             const user = getUser();
             if (!user) throw new Error("No está autorizado para hacer esto");
             const token = user.token;
