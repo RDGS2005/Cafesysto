@@ -164,7 +164,6 @@ El propósito de este módulo es gestionar a los usuarios del sistema, tanto cli
 * [RFU-02 v2.0 — Ingreso al sistema con usuario Cliente](./funcionales/usuarios/RFU-02.md)
 * [RFU-04 v2.0 — Ingreso al sistema con usuario Personal](./funcionales/usuarios/RFU-04.md)
 * [RFU-05 v1.1 — Registrar Personal](./funcionales/usuarios/RFU-05.md)
-* [RFU-05 v1.0 — Registrar Personal](./funcionales/usuarios/RFU-05.md)
 * [RFU-06 v1.0 — Actualización de credenciales de Administrador](./funcionales/usuarios/RFU-06.md)
 
 ### Módulo de Productos
@@ -212,7 +211,7 @@ El propósito de este módulo es gestionar los pedidos, permitir el registro de 
 | RFU-01 | v1.1 | Módulo de Usuarios | Equipo 6 | 1 | 9 | Pendiente |
 | RFU-02 | v2.0 | Módulo de Usuarios | Equipo 6 | 1 | 9 | Pendiente |
 | RFU-04 | v2.0 | Módulo de Usuarios | Equipo 6 | 1 | 9 | Pendiente |
-| RFU-05 | v1.0 | Módulo de Usuarios | Equipo 6 | 1 | 9 | Pendiente |
+| RFU-05 | v1.1 | Módulo de Usuarios | Equipo 6 | 1 | 9 | Pendiente |
 | RFU-06 | v1.0 | Módulo de Usuarios | Equipo 6 | 1 | 9 | Pendiente |
 | RFM-01 | v1.1 | Módulo de Productos | RU-01 | 2 | 8 | Pendiente |
 | RFM-02 | v1.0 | Módulo de Productos | RU-06 | 2 | 8 | Pendiente |
