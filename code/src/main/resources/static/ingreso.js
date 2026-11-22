@@ -1,9 +1,36 @@
+import {baseAPI, storeUser, getUser, findResponseErrors} from "./util.js";
+
 (() => {
     "use strict";
 
+    /**
+     * Redirige al usuario cuando inicia sesión o si ya la ha iniciado
+     */
+    function redirectUser()
+    {
+        const user = getUser();
+        if(!user) return;
+
+        switch(user.rol) {
+            case "CLIENTE":
+                window.location.replace("./cliente/cliente.html");
+                break;
+            case "PERSONAL":
+                window.location.replace("./personal/personal.html");
+                break;
+            case "ADMINISTRADOR":
+                window.location.replace("./administrador/administrador.html");
+                break;
+            default:
+                break;
+        }
+    }
+
+    redirectUser();
+
     // APIs a utilizar
-    const loginAPI = "http://localhost:8080/api/auth";
-    const clientAPI = "http://localhost:8080/api/usuarios/clientes"
+    const loginAPI = `${baseAPI}/auth`;
+    const clientAPI = `${baseAPI}/usuarios/clientes`;
 
     // Elementos de navegación
     const loginView = document.getElementById("view-login");
@@ -16,7 +43,6 @@
     const loginEmail = document.getElementById("login-email");
     const loginPassword = document.getElementById("login-password");
     const loginRole = document.getElementById("login-role");
-    const loginSubmit = document.getElementById("login-submit");
     const loginStatus = document.getElementById("login-status");
 
     // Registro de estudiantes
@@ -27,7 +53,6 @@
     const studentPhone = document.getElementById("student-phone");
     const studentEmail = document.getElementById("student-email");
     const studentPassword = document.getElementById("student-password");
-    const registerSubmit = document.getElementById("register-submit");
     const registerStatus = document.getElementById("register-status");
 
     /**
@@ -47,28 +72,11 @@
     showLogin.addEventListener("click", () => showAuthView("login"));
 
     /**
-     * Maneja errores de respuestas HTTP para mostrarlos al usuario
-     * @param {Response} response respuesta obtenida de un fetch a la API
-     * @throws {Error} siempre
-     */
-    async function findResponseErrors(response) {
-        const errorText = await response.text();
-        let mensajeError;
-        try {
-            const errorJson = JSON.parse(errorText);
-            mensajeError = errorJson.mensaje || errorText;
-        } catch {
-            mensajeError = errorText || "No se pudo completar el registro";
-        }
-        throw new Error(mensajeError);
-    }
-
-    /**
      * Registra a un cliente/estudiante
      * @requires fetch a http://localhost:8080/api/usuarios/clientes
      */
     async function registerClient() {
-        //Obtener datos del formulario
+        // Obtener datos del formulario
         const registerInfo = {
             nombre: studentFirstName.value,
             apellido: studentLastName.value,
@@ -79,7 +87,7 @@
         };
 
         try {
-            //Enviar los datos a la API para el registro
+            // Enviar los datos a la API para el registro
             const response = await fetch(clientAPI, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -87,19 +95,19 @@
             });
             if (!response.ok) {await findResponseErrors(response)}
 
-            //Indicar registro exitoso si no hay errores
+            // Indicar registro exitoso si no hay errores
             registerStatus.textContent = "Registro exitoso. Ya puede iniciar sesión";
             registerForm.reset();
 
         } catch (error) {
-            //Mostrar error al usuario
+            // Mostrar error al usuario
             registerStatus.textContent = error.message;
         }
     }
 
     registerForm.addEventListener("submit", async (event) => {
         event.preventDefault();
-        registerClient();
+        await registerClient();
     });
 
     /**
@@ -115,7 +123,7 @@
         };
 
         try {
-            //Enviar los datos a la API segun el rol para el login
+            // Enviar los datos a la API segun el rol para el login
             const response = await fetch(`${loginAPI}/${role}`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -123,17 +131,19 @@
             });
             if (!response.ok) {await findResponseErrors(response)}
 
-            //Redirigir al usuario si inicia sesion sin errores
+            // Redirigir al usuario si inicia sesion sin errores
             const user = await response.json();
-            console.log(user);
+            storeUser(user);
+            redirectUser();
+
         } catch (error) {
-            //Mostrar error al usuario
+            // Mostrar error al usuario
             loginStatus.textContent = error.message;
         }
     }
 
     loginForm.addEventListener("submit", async (event) => {
         event.preventDefault();
-        login();
+        await login();
     });
 })();
