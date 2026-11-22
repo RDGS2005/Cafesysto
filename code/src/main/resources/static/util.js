@@ -1,5 +1,4 @@
-export const baseURL = "http://localhost:8080"
-export const baseAPI = `${baseURL}/api`;
+export const baseAPI = "/api";
 export const storedUser = "cafesysto_user";
 
 /**
@@ -25,7 +24,7 @@ export function redirectUser() {
     const user = getUser();
 
     if (!user) {
-        window.location.replace(`${baseURL}/index.html`);
+        window.location.replace("/index.html");
     }
 }
 
