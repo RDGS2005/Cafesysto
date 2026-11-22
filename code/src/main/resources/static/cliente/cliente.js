@@ -1,4 +1,4 @@
-import {baseAPI, getUser, findResponseErrors, authFetch} from "../util.js";
+import { baseAPI, getUser, findResponseErrors, authFetch } from "../util.js";
 
 (() => {
     "use strict";
@@ -214,6 +214,7 @@ import {baseAPI, getUser, findResponseErrors, authFetch} from "../util.js";
             // que podrían traer una lista anterior a esta confirmación
             ordersRequestId++;
             orders.unshift(pedido);
+            ordersSignatureCache = ordersSignature(orders);
             renderOrders();
 
             order.clear();
@@ -300,12 +301,32 @@ import {baseAPI, getUser, findResponseErrors, authFetch} from "../util.js";
     }
 
     /**
+ * Firma canónica de una lista de pedidos.
+ * Incluye estado, total y detalles, ordenada de forma estable.
+ */
+    function ordersSignature(list) {
+        return list
+            .map(pedido => [
+                pedido.codigoRetiro,
+                pedido.estado,
+                pedido.total,
+                pedido.fechaRegistro,
+                (pedido.detalles || [])
+                    .map(d => `${d.cantidad}x${d.codigoProducto ?? d.nombreProducto}:${d.precioUnitario}:${d.subtotal}`)
+                    .join("|")
+            ].join("~"))
+            .sort()
+            .join("§");
+    }
+
+    let ordersSignatureCache = null; // firma del último render de "Mis pedidos"
+
+    /**
      * Obtiene todos los pedidos confirmados del cliente. Se vuelve a llamar al abrir "Mi pedido"
      * para actualizar los estados, que cambian cuando el personal prepara o entrega cada pedido.
      * @requires fetch GET a http://localhost:8080/api/pedidos/mis-pedidos (requiere token de cliente)
      */
     async function loadOrders() {
-        // Cada carga invalida a las anteriores: solo cuenta la respuesta de la más reciente
         const requestId = ++ordersRequestId;
 
         try {
@@ -313,14 +334,17 @@ import {baseAPI, getUser, findResponseErrors, authFetch} from "../util.js";
             const pedidos = await response.json();
             if (requestId !== ordersRequestId) { return; }
 
-            // Actualizar la lista de pedidos si no se produjeron errores, el más reciente primero
             pedidos.sort((a, b) => new Date(b.fechaRegistro) - new Date(a.fechaRegistro));
+
+            const nextSignature = ordersSignature(pedidos);
+            if (nextSignature === ordersSignatureCache) { return; } // sin cambios → no re-render
+
             orders = pedidos;
+            ordersSignatureCache = nextSignature;
             renderOrders();
 
         } catch (error) {
             if (requestId !== ordersRequestId) { return; }
-            // Mostrar errores al usuario
             console.error("No se pudieron cargar los pedidos:", error);
             ordersMessage.textContent = "No se pudieron cargar tus pedidos. Inténtalo de nuevo más tarde.";
         }
@@ -396,6 +420,18 @@ import {baseAPI, getUser, findResponseErrors, authFetch} from "../util.js";
     }
 
     /**
+     * Firma canónica del menú (productos disponibles).
+     */
+    function menuSignature(list) {
+        return list
+            .map(item => `${item.codigo}~${item.nombre}~${item.precio}~${item.estado ?? ""}`)
+            .sort()
+            .join("§");
+    }
+
+    let menuSignatureCache = null;   // firma del último render del menú
+
+    /**
      * Obtiene una lista de todos los productos disponibles
      * @requires fetch a http://localhost:8080/api/productos/menu
      */
@@ -413,6 +449,10 @@ import {baseAPI, getUser, findResponseErrors, authFetch} from "../util.js";
 
             // Actualizar la lista de productos si no se produjeron errores
             items = await response.json();
+            const nextSignature = menuSignature(items);
+            if (nextSignature === menuSignatureCache) { menuStatus.textContent = ""; return; }
+
+            menuSignatureCache = nextSignature;
             renderMenu();
             menuStatus.textContent = "";
 
@@ -428,6 +468,19 @@ import {baseAPI, getUser, findResponseErrors, authFetch} from "../util.js";
     orderNavButton.addEventListener("click", loadOrders);
 
     renderOrder();
-    loadMenu();
-    loadOrders();
+
+    // Refrescar los pedidos cada segundo
+    const POLL_MS = 1000;
+    setInterval(() => {
+        if (!document.hidden) {
+            loadMenu();
+            loadOrders();
+        }
+    }, POLL_MS);
+    document.addEventListener("visibilitychange", () => {
+        if (!document.hidden) {
+            loadMenu();
+            loadOrders();
+        }
+    });
 })();

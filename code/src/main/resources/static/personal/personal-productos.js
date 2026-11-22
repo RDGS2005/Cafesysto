@@ -189,7 +189,7 @@ import { baseAPI, authFetch } from "../util.js";
      * @returns primer elemento encontrado
      */
     function findInProduct(code, selector) {
-        return productList.querySelector(`[data-code="${code}"] ${selector}`);
+        return productList.querySelector(`[data-codigo="${code}"] ${selector}`);
     }
 
     /**
