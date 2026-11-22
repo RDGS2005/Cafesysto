@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="cliente.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></noscript>
+    <link rel="icon" href="data:,">
+    <title>Cafesysto · Cliente</title>
+</head>
+<body>
+    <header>
+        <nav aria-label="Navegación principal">
+            <button class="header_button active" type="button" data-view="home" aria-current="page"><span>Cafesysto</span><i class="material-icons" aria-hidden="true">home</i></button>
+            <button class="header_button" type="button" data-view="menu"><span>Menú</span><i class="material-icons" aria-hidden="true">menu_book</i></button>
+            <button class="header_button" type="button" data-view="order"><span>Mi pedido <span id="order-count" class="order-badge" hidden>0</span></span><i class="material-icons" aria-hidden="true">shopping_cart</i></button>
+            <button id="logout-button" class="header_button" type="button"><span>Salir</span><i class="material-icons" aria-hidden="true">logout</i></button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="view-home" class="welcome-section" data-view-panel="home" aria-labelledby="welcome-title">
+            <p class="eyebrow">Pausa deliciosa</p>
+            <h1 id="welcome-title" tabindex="-1">¡Bienvenido a Cafesysto!</h1>
+            <p>Revisa nuestro menú, elige tus productos favoritos y agrégalos a tu pedido.</p>
+        </section>
+
+        <section id="view-menu" class="menu-section" data-view-panel="menu" aria-labelledby="menu-title" hidden>
+            <p class="eyebrow">Nuestra carta</p>
+            <h1 id="menu-title" tabindex="-1">Menú</h1>
+            <p id="menu-status" class="menu-status" role="status" aria-live="polite">Cargando menú…</p>
+            <ul id="menu-list" class="menu-list"></ul>
+        </section>
+
+        <section id="view-order" class="order-section" data-view-panel="order" aria-labelledby="order-title" hidden>
+            <p class="eyebrow">Resumen</p>
+            <h1 id="order-title" tabindex="-1">Mi pedido</h1>
+            <p id="order-message" class="menu-status" role="status" aria-live="polite">Tu pedido está vacío.</p>
+            <ul id="order-items" class="order-items" aria-label="Productos del pedido"></ul>
+            <dl class="order-summary">
+                <div class="order-row">
+                    <dt>Importe total</dt>
+                    <dd id="order-total">$0.00</dd>
+                </div>
+                <button id="confirm-button" type="button" class="add-button" aria-label="Confirmar pedido" disabled>Confirmar pedido</button>
+            </dl>
+
+            <h2 id="orders-title" class="orders-title">Mis pedidos</h2>
+            <p id="orders-message" class="menu-status" role="status" aria-live="polite">Cargando pedidos…</p>
+            <ul id="orders-list" class="orders-list" aria-labelledby="orders-title"></ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <small>&copy; 2026 Cafesysto. Todos los derechos reservados.</small>
+        </div>
+    </footer>
+    <script type="module">
+        import { redirectUser, logout, showView } from "../util.js";
+
+        (() => {
+
+            "use strict";
+
+            redirectUser();
+            // Elementos de Navegación
+            const navButtons = document.querySelectorAll(".header_button[data-view]");
+            const panels = document.querySelectorAll("[data-view-panel]");
+            const logoutButton = document.getElementById("logout-button");
+
+            navButtons.forEach(button => {
+                button.addEventListener("click", () => showView(panels, navButtons, button.dataset.view, { moveFocus: true }));
+            });
+
+            showView(panels, navButtons, "home");
+            logoutButton.addEventListener("click", () => logout());
+
+        })();
+    </script>
+    <script type="module" src="cliente.js"></script>
+</body>
+</html>
