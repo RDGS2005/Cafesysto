@@ -53,16 +53,29 @@ public class UsuarioService {
      * pendiente.
      */
     @Transactional
-    public Personal registrarPersonal(ContextoAutenticado contexto, RegistroPersonalRequest datos) {
+    public Personal registrarPersonal(
+            ContextoAutenticado contexto,
+            RegistroPersonalRequest datos) {
+
         autenticacionService.exigirAdministradorSinBloqueo(contexto);
-        validarDatosPersonal(datos);
+
+        // RFU-05: no se exige dominio institucional.
+        // @Valid y @Email validan el formato en el controlador.
         validarUnicidad(datos.cedula(), datos.correo());
 
         Personal personal = new Personal();
-        copiarDatosPersona(personal, datos.nombre(), datos.apellido(), datos.cedula(), datos.celular(),
+
+        copiarDatosPersona(
+                personal,
+                datos.nombre(),
+                datos.apellido(),
+                datos.cedula(),
+                datos.celular(),
                 datos.correo());
-        // TODO (RFU-05): se define que la contraseña  inicial del personal se asigna al registrar al personal
-        personal.setClaveHash(claveHasher.generarHash(datos.clave()));
+
+        personal.setClaveHash(
+                claveHasher.generarHash(datos.clave()));
+
         return (Personal) usuarioRepository.save(personal);
     }
 
@@ -72,10 +85,6 @@ public class UsuarioService {
         validarCorreoInstitucional(datos.correo());
     }
 
-    private void validarDatosPersonal(RegistroPersonalRequest datos) {
-        // TODO (RFU-05): se confirma que el correo del personal debe tener un "@", no es correo institucional
-        validarCorreoInstitucional(datos.correo());
-    }
 
     private void validarCorreoInstitucional(String correo) {
         String sufijo = "@" + propiedades.correoInstitucionalDominio();
