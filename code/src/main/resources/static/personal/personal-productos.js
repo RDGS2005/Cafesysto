@@ -1,4 +1,4 @@
-import { baseAPI, getUser, findResponseErrors} from "../util.js";
+import { baseAPI, authFetch } from "../util.js";
 
 (() => {
     "use strict";
@@ -33,24 +33,15 @@ import { baseAPI, getUser, findResponseErrors} from "../util.js";
         };
 
         try {
-            // Obtener permisos de usuario
-            const user = getUser();
-            if (!user) throw new Error("No está autorizado para hacer esto");
-            const token = user.token;
             // Enviar los datos a la API para el registro
-            const response = await fetch(productAPI, {
+            const response = await authFetch(productAPI, {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": "Bearer " + token
-                },
                 body: JSON.stringify(registerInfo)
             });
-            if (!response.ok) { await findResponseErrors(response) }
 
             // Indicar registro exitoso si no hay errores
             productForm.reset();
-            products.push(response.json());
+            products.push(await response.json());
             renderProducts();
             productsStatus.textContent = "Producto registrado exitosamente";
 
@@ -176,21 +167,8 @@ import { baseAPI, getUser, findResponseErrors} from "../util.js";
      */
     async function loadProducts() {
         try {
-            // Obtener permisos de usuario
-            const user = getUser();
-            if (!user) throw new Error("No está autorizado para hacer esto");
-            const token = user.token;
-
-            // Enviar los datos a la API para el registro
-            const response = await fetch(productAPI, {
-                method: "GET",
-                headers: {
-                    "Authorization": `Bearer ${token}`,
-                    "Accept": "application/json"
-                }
-            });
-
-            if (!response.ok) { await findResponseErrors(response) }
+            // Obtener la lista de productos de la API
+            const response = await authFetch(productAPI);
 
             // Actualizar la lista de productos si no se produjeron errores
             products = await response.json();
@@ -260,20 +238,11 @@ import { baseAPI, getUser, findResponseErrors} from "../util.js";
         const price = parsePrice(input.value);
 
         try {
-            // Obtener permisos de usuario
-            const user = getUser();
-            if (!user) throw new Error("No está autorizado para hacer esto");
-            const token = user.token;
             // Enviar los datos a la API para el cambio
-            const response = await fetch(`${productAPI}/${product.codigo}/precio`, {
+            await authFetch(`${productAPI}/${product.codigo}/precio`, {
                 method: "PATCH",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": "Bearer " + token
-                },
                 body: JSON.stringify({ precio: price })
             });
-            if (!response.ok) { await findResponseErrors(response) }
 
             // Indicar cambio exitoso si no hay errores
             product.precio = price;
@@ -299,20 +268,11 @@ import { baseAPI, getUser, findResponseErrors} from "../util.js";
         const newState = currentState === "DISPONIBLE" ? "NO_DISPONIBLE" : "DISPONIBLE";
 
         try {
-            // Obtener permisos de usuario
-            const user = getUser();
-            if (!user) throw new Error("No está autorizado para hacer esto");
-            const token = user.token;
             // Enviar los datos a la API para el cambio
-            const response = await fetch(`${productAPI}/${product.codigo}/disponibilidad`, {
+            await authFetch(`${productAPI}/${product.codigo}/disponibilidad`, {
                 method: "PATCH",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": "Bearer " + token
-                },
                 body: JSON.stringify({ estado: newState })
             });
-            if (!response.ok) { await findResponseErrors(response) }
 
             // Indicar cambio exitoso si no hay errores
             product.estado = newState;

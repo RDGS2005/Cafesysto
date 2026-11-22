@@ -1,4 +1,4 @@
-import {baseAPI, getUser, findResponseErrors} from "../util.js";
+import {baseAPI, authFetch} from "../util.js";
 
 (() => {
     "use strict";
@@ -40,17 +40,11 @@ import {baseAPI, getUser, findResponseErrors} from "../util.js";
         };
 
         try {
-            const user = getUser();
-            if(!user) throw new Error("No está autorizado para hacer esto");
-            const token = user.token;
             // Enviar los datos a la API para el registro
-            const response = await fetch(staffAPI, {
+            await authFetch(staffAPI, {
                 method: "POST",
-                headers: {  "Content-Type": "application/json",
-                            "Authorization": "Bearer " + token},
                 body: JSON.stringify(registerInfo)
             });
-            if (!response.ok) {await findResponseErrors(response)}
 
             // Indicar registro exitoso si no hay errores
             staffStatus.textContent = "Registro exitoso de empleado";
@@ -80,17 +74,11 @@ import {baseAPI, getUser, findResponseErrors} from "../util.js";
         };
 
         try {
-            const user = getUser();
-            if(!user) throw new Error("No está autorizado para hacer esto");
-            const token = user.token;
             // Enviar los datos a la API para el cambio de clave
-            const response = await fetch(`${adminAPI}/clave`, {
+            await authFetch(`${adminAPI}/clave`, {
                 method: "POST",
-                headers: {  "Content-Type": "application/json",
-                            "Authorization": "Bearer " + token},
                 body: JSON.stringify(registerInfo)
             });
-            if (!response.ok) {await findResponseErrors(response)}
 
             // Indicar cambio exitoso si no hay errores
             passwordStatus.textContent = "Cambio de contraseña exitoso";

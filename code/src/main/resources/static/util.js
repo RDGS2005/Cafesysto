@@ -55,6 +55,38 @@ export async function findResponseErrors(response) {
 }
 
 /**
+ * Envía una petición a la API con el token de la sesión del usuario
+ * @param {string} url dirección del endpoint
+ * @param {RequestInit} [options] opciones de fetch, por ejemplo method y body (JSON en texto)
+ * @returns {Promise<Response>} respuesta correcta (2xx) de la API
+ * @throws {Error} si no hay sesión, si la sesión expiró (401, y además cierra la sesión)
+ * o con el mensaje del servidor si la respuesta no es correcta
+ */
+export async function authFetch(url, options = {}) {
+    // Obtener permisos de usuario
+    const user = getUser();
+    if (!user) throw new Error("No está autorizado para hacer esto");
+
+    const response = await fetch(url, {
+        ...options,
+        headers: {
+            "Accept": "application/json",
+            ...(options.body ? { "Content-Type": "application/json" } : {}),
+            ...options.headers,
+            "Authorization": `Bearer ${user.token}`
+        }
+    });
+
+    // La sesión ya no es válida: se cierra y se vuelve al login
+    if (response.status === 401) {
+        logout();
+        throw new Error("Tu sesión expiró. Inicia sesión de nuevo.");
+    }
+    if (!response.ok) { await findResponseErrors(response) }
+    return response;
+}
+
+/**
  * Cambiar de vista/panel con los botones de navegación
  * @param {NodeListOf<Element>} panels vistas del documento
  * @param {NodeListOf<Element>} navButtons botones correspondientes a cada vista
