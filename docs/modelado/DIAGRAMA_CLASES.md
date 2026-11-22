@@ -26,7 +26,6 @@ namespace Usuarios {
         +registrarCliente(datos): Cliente
         +registrarPersonal(contexto, datos): Personal
         -validarDatosCliente(datos)
-        -validarDatosPersonal(datos)
         -validarUnicidad(cedula, correo)
         -generarCodigoCliente(): String
     }

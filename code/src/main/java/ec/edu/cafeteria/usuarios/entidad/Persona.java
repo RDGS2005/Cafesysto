@@ -2,8 +2,15 @@ package ec.edu.cafeteria.usuarios.entidad;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+/** Datos comunes de clientes y personal. No aplica al administrador. */
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
 public abstract class Persona extends Usuario {
 
     @Column(name = "nombre")
@@ -12,25 +19,25 @@ public abstract class Persona extends Usuario {
     @Column(name = "apellido")
     private String apellido;
 
-    @Column(name = "cedula")
+    @Column(name = "cedula", length = 10)
     private String cedula;
 
-    @Column(name = "celular")
+    @Column(name = "celular", length = 10)
     private String celular;
 
     @Column(name = "correo")
     private String correo;
 
     public String obtenerCedula() {
-        return null;
+        return cedula;
     }
 
     public String obtenerCorreo() {
-        return null;
+        return correo;
     }
 
     @Override
     public String obtenerTokenAcceso() {
-        return null;
+        return correo;
     }
 }

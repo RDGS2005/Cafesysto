@@ -12,3 +12,9 @@ spring:
 
 server:
   port: 8080
+
+cafeteria:
+  correo-institucional-dominio: ${CAFETERIA_CORREO_DOMINIO}
+  admin:
+    usuario: ${CAFETERIA_ADMIN_USUARIO:admin}
+    clave: ${CAFETERIA_ADMIN_CLAVE}
