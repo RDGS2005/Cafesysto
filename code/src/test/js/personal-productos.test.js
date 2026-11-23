@@ -22,7 +22,7 @@ async function load(initial = PRODUCTS()) {
     const env = setupEnv(HTML);
     loginAs({ rol: "PERSONAL", token: "tok" });
     env.fetchMock.mockResolvedValue(jsonResponse(initial));
-    await import("../personal/personal-productos.js");
+    await import("@static/personal/personal-productos.js");
     await flush();
     return env;
 }
@@ -64,7 +64,7 @@ describe("carga y listado", () => {
         loginAs({ rol: "PERSONAL", token: "tok" });
         env.fetchMock.mockResolvedValue(textResponse("boom", 500));
         vi.spyOn(console, "error").mockImplementation(() => {});
-        await import("../personal/personal-productos.js");
+        await import("@static/personal/personal-productos.js");
         await flush();
 
         expect($("products-status").textContent).toBe("No se pudieron cargar los productos. Inténtalo de nuevo más tarde.");

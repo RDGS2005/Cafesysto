@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
-import * as util from "../util.js";
+import * as util from "@static/util.js";
 import { jsonResponse, textResponse, loginAs, USER_KEY } from "./helpers.js";
 
 let fetchMock;

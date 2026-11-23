@@ -30,7 +30,7 @@ const $ = id => document.getElementById(id);
 async function load(prepare) {
     const env = setupEnv(HTML);
     if (prepare) prepare(env);
-    await import("../ingreso.js");
+    await import("@static/ingreso.js");
     return env;
 }
 

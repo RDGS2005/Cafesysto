@@ -17,7 +17,7 @@ const $ = id => document.getElementById(id);
 async function load() {
     const env = setupEnv(HTML);
     loginAs({ rol: "ADMINISTRADOR", token: "admin-token" });
-    await import("../administrador/administrador.js");
+    await import("@static/administrador/administrador.js");
     return env;
 }
 

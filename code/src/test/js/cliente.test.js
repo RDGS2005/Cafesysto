@@ -57,7 +57,7 @@ async function load(overrides = {}) {
     });
 
     vi.useFakeTimers({ toFake: ["setInterval", "clearInterval"] });
-    await import("../cliente/cliente.js");
+    await import("@static/cliente/cliente.js");
     return env;
 }
 

@@ -46,7 +46,7 @@ async function load(orders, handlers = {}) {
         return jsonResponse(serverOrders);
     });
     vi.useFakeTimers({ toFake: ["setInterval", "clearInterval"] });
-    await import("../personal/personal-pedidos.js");
+    await import("@static/personal/personal-pedidos.js");
     // Abrir la vista de pedidos carga el tablero
     document.querySelector(".header_button").click();
     await flush();
