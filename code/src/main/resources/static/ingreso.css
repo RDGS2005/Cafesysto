@@ -12,7 +12,7 @@
 
 /* Panel de imagen: En escritorio ocupa la mitad izquierda; en móvil es un banner recortado arriba. */
 .auth-image {
-    --auth-image: url("https://neurosciencenews.com/files/2023/06/coffee-brain-caffeine-neuroscincces.jpg");
+    --auth-image: url("./img/logo.png");
     min-height: 24rem;
     background-color: var(--secondary-color);
     background-image: var(--auth-image);

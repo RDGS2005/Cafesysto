@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="administrador.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></noscript>
-    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" media="print"
+        onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </noscript>
+    <link rel="icon" type="image/png" href="../img/favicon.png">
     <title>Cafesysto · Administrador</title>
 </head>
+
 <body>
     <header>
         <nav aria-label="Navegación principal">
-            <button class="header_button active" type="button" data-view="home" aria-current="page"><span>Cafesysto</span><i class="material-icons" aria-hidden="true">home</i></button>
-            <button class="header_button" type="button" data-view="staff"><span>Registrar personal</span><i class="material-icons" aria-hidden="true">person_add</i></button>
-            <button class="header_button" type="button" data-view="password"><span>Cambiar contraseña</span><i class="material-icons" aria-hidden="true">lock_reset</i></button>
-            <button id="logout-button" class="header_button" type="button"><span>Salir</span><i class="material-icons" aria-hidden="true">logout</i></button>
+            <button class="header_button active" type="button" data-view="home"
+                aria-current="page"><span>Cafesysto</span><i class="material-icons" aria-hidden="true">home</i></button>
+            <button class="header_button" type="button" data-view="staff"><span>Registrar personal</span><i
+                    class="material-icons" aria-hidden="true">person_add</i></button>
+            <button class="header_button" type="button" data-view="password"><span>Cambiar contraseña</span><i
+                    class="material-icons" aria-hidden="true">lock_reset</i></button>
+            <button id="logout-button" class="header_button" type="button"><span>Salir</span><i class="material-icons"
+                    aria-hidden="true">logout</i></button>
         </nav>
     </header>
 
@@ -27,7 +36,8 @@
         <section id="view-home" class="panel panel-welcome" data-view-panel="home" aria-labelledby="welcome-title">
             <p class="eyebrow">Panel del administrador</p>
             <h1 id="welcome-title" tabindex="-1">¡Bienvenido, administrador!</h1>
-            <p>Registra al personal de Cafesysto y mantén segura tu cuenta cambiando tu contraseña cuando lo necesites.</p>
+            <p>Registra al personal de Cafesysto y mantén segura tu cuenta cambiando tu contraseña cuando lo necesites.
+            </p>
         </section>
 
         <!-- Registrar personal -->
@@ -39,36 +49,47 @@
                 <div class="form-grid">
                     <div class="field">
                         <label for="staff-first-name">Nombre</label>
-                        <input id="staff-first-name" type="text" maxlength="40" autocomplete="given-name" aria-describedby="staff-first-name-error">
+                        <input id="staff-first-name" type="text" maxlength="40" autocomplete="given-name"
+                            aria-describedby="staff-first-name-error">
                         <p id="staff-first-name-error" class="field-error" hidden></p>
                     </div>
                     <div class="field">
                         <label for="staff-last-name">Apellido</label>
-                        <input id="staff-last-name" type="text" maxlength="40" autocomplete="family-name" aria-describedby="staff-last-name-error">
+                        <input id="staff-last-name" type="text" maxlength="40" autocomplete="family-name"
+                            aria-describedby="staff-last-name-error">
                         <p id="staff-last-name-error" class="field-error" hidden></p>
                     </div>
                     <div class="field">
                         <label for="staff-id">Cédula</label>
-                        <input id="staff-id" type="text" inputmode="numeric" maxlength="10" autocomplete="off" aria-describedby="staff-id-hint staff-id-error">
+                        <input id="staff-id" type="text" inputmode="numeric" maxlength="10" autocomplete="off"
+                            aria-describedby="staff-id-hint staff-id-error">
                         <p id="staff-id-hint" class="field-hint">10 números, sin guiones.</p>
                         <p id="staff-id-error" class="field-error" hidden></p>
                     </div>
                     <div class="field">
                         <label for="staff-phone">Celular</label>
-                        <input id="staff-phone" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel-national" aria-describedby="staff-phone-hint staff-phone-error">
+                        <input id="staff-phone" type="tel" inputmode="numeric" maxlength="10"
+                            autocomplete="tel-national" aria-describedby="staff-phone-hint staff-phone-error">
                         <p id="staff-phone-hint" class="field-hint">10 números, empieza con 09.</p>
                         <p id="staff-phone-error" class="field-error" hidden></p>
                     </div>
                     <div class="field field-wide">
                         <label for="staff-email">Correo</label>
-                        <input id="staff-email" type="email" maxlength="80" autocomplete="email" aria-describedby="staff-email-error">
+                        <input id="staff-email" type="email" maxlength="80" autocomplete="email"
+                            aria-describedby="staff-email-error">
                         <p id="staff-email-error" class="field-error" hidden></p>
                     </div>
                     <div class="field field-wide">
                         <label for="staff-password">Contraseña</label>
-                        <input id="staff-password" type="password" maxlength="64" autocomplete="new-password" aria-describedby="staff-password-hint staff-password-error">
-                        <p id="staff-password-hint" class="field-hint">Mínimo 8 caracteres, con al menos una letra y un número.</p>
+                        <input id="staff-password" type="password" maxlength="64" autocomplete="new-password"
+                            aria-describedby="staff-password-hint staff-password-error">
+                        <p id="staff-password-hint" class="field-hint">Mínimo 8 caracteres, con al menos una letra y un
+                            número.</p>
                         <p id="staff-password-error" class="field-error" hidden></p>
+                        <label class="show-password">
+                            <input type="checkbox" class="toggle-password" data-target="staff-password">
+                            Mostrar contraseña
+                        </label>
                     </div>
                 </div>
                 <button id="staff-submit" class="btn" type="submit">Registrar</button>
@@ -86,19 +107,35 @@
                 <div class="form-grid">
                     <div class="field field-wide">
                         <label for="current-password">Contraseña actual</label>
-                        <input id="current-password" type="password" maxlength="64" autocomplete="current-password" aria-describedby="current-password-error">
+                        <input id="current-password" type="password" maxlength="64" autocomplete="current-password"
+                            aria-describedby="current-password-error">
                         <p id="current-password-error" class="field-error" hidden></p>
+                        <label class="show-password">
+                            <input type="checkbox" class="toggle-password" data-target="current-password">
+                            Mostrar contraseña
+                        </label>
                     </div>
                     <div class="field field-wide">
                         <label for="new-password">Nueva contraseña</label>
-                        <input id="new-password" type="password" maxlength="64" autocomplete="new-password" aria-describedby="new-password-hint new-password-error">
-                        <p id="new-password-hint" class="field-hint">Mínimo 8 caracteres, con al menos una letra y un número.</p>
+                        <input id="new-password" type="password" maxlength="64" autocomplete="new-password"
+                            aria-describedby="new-password-hint new-password-error">
+                        <p id="new-password-hint" class="field-hint">Mínimo 8 caracteres, con al menos una letra y un
+                            número.</p>
                         <p id="new-password-error" class="field-error" hidden></p>
+                        <label class="show-password">
+                            <input type="checkbox" class="toggle-password" data-target="new-password">
+                            Mostrar contraseña
+                        </label>
                     </div>
                     <div class="field field-wide">
                         <label for="confirm-password">Confirmar nueva contraseña</label>
-                        <input id="confirm-password" type="password" maxlength="64" autocomplete="new-password" aria-describedby="confirm-password-error">
+                        <input id="confirm-password" type="password" maxlength="64" autocomplete="new-password"
+                            aria-describedby="confirm-password-error">
                         <p id="confirm-password-error" class="field-error" hidden></p>
+                        <label class="show-password">
+                            <input type="checkbox" class="toggle-password" data-target="confirm-password">
+                            Mostrar contraseña
+                        </label>
                     </div>
                 </div>
                 <button id="password-submit" class="btn" type="submit">Cambiar contraseña</button>
@@ -133,8 +170,17 @@
             showView(panels, navButtons, "home");
             logoutButton.addEventListener("click", () => logout());
 
+            document.querySelectorAll('.toggle-password').forEach((cb) => {
+                cb.addEventListener('change', () => {
+                    const input = document.getElementById(cb.dataset.target);
+                    if (!input) return;
+                    input.type = cb.checked ? 'text' : 'password';
+                });
+            });
+
         })();
     </script>
     <script type="module" src="administrador.js"></script>
 </body>
+
 </html>
