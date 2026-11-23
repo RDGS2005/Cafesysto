@@ -1,0 +1,178 @@
+/* Ocupa todo el ancho de la pantalla con un pequeño margen */
+.auth-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: calc(100% - 2rem);
+    margin: 1rem auto;
+    overflow: hidden;
+    border: 2px solid var(--secondary-color);
+    border-radius: 18px;
+    box-shadow: 0 8px 24px var(--secondary-color);
+}
+
+/* Panel de imagen: En escritorio ocupa la mitad izquierda; en móvil es un banner recortado arriba. */
+.auth-image {
+    --auth-image: url("./img/logo.png");
+    min-height: 24rem;
+    background-color: var(--secondary-color);
+    background-image: var(--auth-image);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Panel de formularios: ocupa toda su mitad del ancho, con el contenido arriba y sin centrar. */
+.auth-panel {
+    padding: clamp(1.5rem, 4vw, 3rem);
+    background: var(--ternary-color);
+}
+
+.auth-card {
+    width: 100%;
+}
+
+.eyebrow {
+    margin: 0 0 0.35rem;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.auth-card h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+}
+
+.auth-card h1:focus-visible {
+    outline: 3px solid #1f6f8b;
+    outline-offset: 2px;
+}
+
+/* Formularios */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.field {
+    display: grid;
+    gap: 0.25rem;
+    align-content: start;
+}
+
+.field-wide {
+    grid-column: 1 / -1;
+}
+
+.field label {
+    font-weight: 600;
+}
+
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"],
+.field input[type="tel"],
+.field select {
+    width: 100%;
+    padding: 0.5rem 0.65rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    background: white;
+    color: inherit;
+    font: inherit;
+}
+
+.field input[aria-invalid="true"] {
+    border-width: 2px;
+    border-color: #9b1c1c;
+}
+
+.field-check {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.field-check input {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.field-hint,
+.field-error {
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+.field-error {
+    color: #9b1c1c;
+    font-weight: 700;
+}
+
+.status {
+    min-height: 1.5em;
+    margin: 0.75rem 0;
+    font-weight: 600;
+}
+
+/* Botones */
+.btn {
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 9px;
+    background: var(--tertiary-color);
+    color: inherit;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn:hover:not(:disabled) {
+    filter: brightness(1.05);
+}
+
+.btn:disabled {
+    cursor: progress;
+    opacity: 0.7;
+}
+
+.btn-secondary {
+    background: var(--main-color);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn:focus-visible,
+.field input:focus-visible,
+.field select:focus-visible {
+    outline: 3px solid #1f6f8b;
+    outline-offset: 2px;
+}
+
+/* Móvil: la imagen pasa arriba como banner recortado y el panel de formularios va debajo */
+@media (max-width: 800px) {
+    .auth-page {
+        grid-template-columns: 1fr;
+        grid-template-rows: 10rem auto;
+    }
+
+    .auth-image {
+        min-height: 0;
+    }
+
+    .auth-panel {
+        padding: 1.25rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
