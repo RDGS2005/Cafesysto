@@ -53,6 +53,12 @@ import { baseAPI, authFetch } from "../util.js";
 
     productForm.addEventListener("submit", async (event) => {
         event.preventDefault();
+
+        if (!productForm.checkValidity()) {
+            productForm.reportValidity();
+            return;
+        }
+
         await registerProduct();
     });
 
@@ -65,7 +71,7 @@ import { baseAPI, authFetch } from "../util.js";
         const li = document.createElement("li");
         li.className = "product-item";
         li.dataset.codigo = product.codigo;
-        
+
         // Agregar los datos del producto
         const code = document.createElement("span");
         code.className = "product-code";
@@ -123,7 +129,7 @@ import { baseAPI, authFetch } from "../util.js";
 
         const actions = document.createElement("div");
         actions.className = "product-actions";
-        
+
         // Botón para cambiar precio del producto
         if (editingCode !== product.codigo) {
             const edit = document.createElement("button");
@@ -228,7 +234,7 @@ import { baseAPI, authFetch } from "../util.js";
         if (!Number.isFinite(value) || value < 0) return null;
         return Math.round(value * 100) / 100;
     }
-    
+
     /**
      * Cambia el precio de un producto
      * @param {*} product producto a actualizar

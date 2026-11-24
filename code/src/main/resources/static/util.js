@@ -37,6 +37,63 @@ export function logout() {
 }
 
 /**
+ * Valida una cédula ecuatoriana: 10 dígitos, provincia válida (01-24 o 30),
+ * tercer dígito menor a 6 y dígito verificador correcto (módulo 10)
+ * @param {string} cedula cédula a validar
+ * @returns {boolean} true si la cédula es válida
+ */
+export function isValidCedula(cedula) {
+    if (typeof cedula !== "string" || !/^\d{10}$/.test(cedula)) return false;
+
+    const province = Number(cedula.slice(0, 2));
+    if (!((province >= 1 && province <= 24) || province === 30)) return false;
+    if (Number(cedula[2]) >= 6) return false;
+
+    // Coeficientes 2,1,2,1,... sobre los primeros 9 dígitos; si el producto supera 9 se resta 9
+    let sum = 0;
+    for (let i = 0; i < 9; i++) {
+        let product = Number(cedula[i]) * (i % 2 === 0 ? 2 : 1);
+        if (product > 9) product -= 9;
+        sum += product;
+    }
+    const checkDigit = (10 - (sum % 10)) % 10;
+    return checkDigit === Number(cedula[9]);
+}
+
+/**
+ * Valida un número de celular ecuatoriano: 10 dígitos que empiezan con 09
+ * @param {string} celular número a validar
+ * @returns {boolean} true si el número es válido
+ */
+export function isValidCelular(celular) {
+    return typeof celular === "string" && /^09\d{8}$/.test(celular);
+}
+
+const FIELD_LABELS = {
+    nombre: "Nombre",
+    apellido: "Apellido",
+    cedula: "Cédula",
+    celular: "Celular",
+    correo: "Correo",
+    clave: "Contraseña",
+    actual: "Contraseña actual",
+    nueva: "Nueva contraseña",
+    confirmacion: "Confirmación"
+};
+
+/**
+ * Convierte un detalle del servidor con formato "campo: mensaje" a un texto legible
+ * @param {string} detalle detalle de validación, por ejemplo "clave: debe tener al menos 8 caracteres"
+ * @returns {string} detalle con el nombre del campo en lenguaje natural
+ */
+function describeFieldError(detalle) {
+    const separator = detalle.indexOf(": ");
+    if (separator === -1) return detalle;
+    const field = detalle.slice(0, separator);
+    return `${FIELD_LABELS[field] ?? field}: ${detalle.slice(separator + 2)}`;
+}
+
+/**
  * Maneja errores de respuestas HTTP para mostrarlos al usuario
  * @param {Response} response respuesta obtenida de un fetch a la API
  * @throws {Error} siempre
@@ -47,6 +104,11 @@ export async function findResponseErrors(response) {
     try {
         const errorJson = JSON.parse(errorText);
         mensajeError = errorJson.mensaje || errorText;
+        // Agregar el detalle de cada campo inválido (por ejemplo "clave: debe tener al menos 8 caracteres")
+        if (errorJson.mensaje && Array.isArray(errorJson.detalles) && errorJson.detalles.length > 0) {
+            const detalles = errorJson.detalles.map(describeFieldError).join("; ");
+            mensajeError = `${errorJson.mensaje}: ${detalles}`;
+        }
     } catch {
         mensajeError = errorText || "No se pudo completar el registro";
     }

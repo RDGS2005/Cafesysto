@@ -50,41 +50,40 @@
                     <div class="field">
                         <label for="staff-first-name">Nombre</label>
                         <input id="staff-first-name" type="text" maxlength="40" autocomplete="given-name"
-                            aria-describedby="staff-first-name-error">
+                            aria-describedby="staff-first-name-error" required>
                         <p id="staff-first-name-error" class="field-error" hidden></p>
                     </div>
                     <div class="field">
                         <label for="staff-last-name">Apellido</label>
                         <input id="staff-last-name" type="text" maxlength="40" autocomplete="family-name"
-                            aria-describedby="staff-last-name-error">
+                            aria-describedby="staff-last-name-error" required>
                         <p id="staff-last-name-error" class="field-error" hidden></p>
                     </div>
                     <div class="field">
                         <label for="staff-id">Cédula</label>
                         <input id="staff-id" type="text" inputmode="numeric" maxlength="10" autocomplete="off"
-                            aria-describedby="staff-id-hint staff-id-error">
-                        <p id="staff-id-hint" class="field-hint">10 números, sin guiones.</p>
+                            aria-describedby="staff-id-hint staff-id-error" required>
+                        <p id="staff-id-hint" class="field-hint">10 números de la cédula ecuatoriana, sin guiones.</p>
                         <p id="staff-id-error" class="field-error" hidden></p>
                     </div>
                     <div class="field">
                         <label for="staff-phone">Celular</label>
                         <input id="staff-phone" type="tel" inputmode="numeric" maxlength="10"
-                            autocomplete="tel-national" aria-describedby="staff-phone-hint staff-phone-error">
+                            autocomplete="tel-national" aria-describedby="staff-phone-hint staff-phone-error" required>
                         <p id="staff-phone-hint" class="field-hint">10 números, empieza con 09.</p>
                         <p id="staff-phone-error" class="field-error" hidden></p>
                     </div>
                     <div class="field field-wide">
                         <label for="staff-email">Correo</label>
                         <input id="staff-email" type="email" maxlength="80" autocomplete="email"
-                            aria-describedby="staff-email-error">
+                            aria-describedby="staff-email-error" required>
                         <p id="staff-email-error" class="field-error" hidden></p>
                     </div>
                     <div class="field field-wide">
                         <label for="staff-password">Contraseña</label>
                         <input id="staff-password" type="password" maxlength="64" autocomplete="new-password"
-                            aria-describedby="staff-password-hint staff-password-error">
-                        <p id="staff-password-hint" class="field-hint">Mínimo 8 caracteres, con al menos una letra y un
-                            número.</p>
+                            aria-describedby="staff-password-hint staff-password-error" required>
+                        <p id="staff-password-hint" class="field-hint">Mínimo 8 caracteres.</p>
                         <p id="staff-password-error" class="field-error" hidden></p>
                         <label class="show-password">
                             <input type="checkbox" class="toggle-password" data-target="staff-password">
@@ -108,7 +107,7 @@
                     <div class="field field-wide">
                         <label for="current-password">Contraseña actual</label>
                         <input id="current-password" type="password" maxlength="64" autocomplete="current-password"
-                            aria-describedby="current-password-error">
+                            aria-describedby="current-password-error" required>
                         <p id="current-password-error" class="field-error" hidden></p>
                         <label class="show-password">
                             <input type="checkbox" class="toggle-password" data-target="current-password">
@@ -118,9 +117,8 @@
                     <div class="field field-wide">
                         <label for="new-password">Nueva contraseña</label>
                         <input id="new-password" type="password" maxlength="64" autocomplete="new-password"
-                            aria-describedby="new-password-hint new-password-error">
-                        <p id="new-password-hint" class="field-hint">Mínimo 8 caracteres, con al menos una letra y un
-                            número.</p>
+                            aria-describedby="new-password-hint new-password-error" requireds>
+                        <p id="new-password-hint" class="field-hint">Mínimo 8 caracteres.</p>
                         <p id="new-password-error" class="field-error" hidden></p>
                         <label class="show-password">
                             <input type="checkbox" class="toggle-password" data-target="new-password">
@@ -130,7 +128,7 @@
                     <div class="field field-wide">
                         <label for="confirm-password">Confirmar nueva contraseña</label>
                         <input id="confirm-password" type="password" maxlength="64" autocomplete="new-password"
-                            aria-describedby="confirm-password-error">
+                            aria-describedby="confirm-password-error" required>
                         <p id="confirm-password-error" class="field-error" hidden></p>
                         <label class="show-password">
                             <input type="checkbox" class="toggle-password" data-target="confirm-password">
@@ -167,7 +165,19 @@
                 button.addEventListener("click", () => showView(panels, navButtons, button.dataset.view, { moveFocus: true }));
             });
 
-            showView(panels, navButtons, "home");
+            const user = getUser();
+            const mustChangePassword = user?.requiereCambioClave === true;
+
+            if (mustChangePassword) {
+                // Abrir directamente el panel de contraseña y bloquear el resto
+                showView(panels, navButtons, "password");
+                navButtons.forEach(button => {
+                    if (button.dataset.view !== "password") button.disabled = true;
+                });
+            } else {
+                showView(panels, navButtons, "home");
+            }
+
             logoutButton.addEventListener("click", () => logout());
 
             document.querySelectorAll('.toggle-password').forEach((cb) => {

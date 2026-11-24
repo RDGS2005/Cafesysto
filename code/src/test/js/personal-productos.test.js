@@ -103,6 +103,20 @@ describe("registrar producto", () => {
         expect(JSON.parse(fetchMock.mock.calls[1][1].body).estado).toBe("NO_DISPONIBLE");
     });
 
+    it("no llama a la API si el formulario no cumple la validación del navegador", async () => {
+        const { fetchMock } = await load();
+        $("product-name").required = true;
+        $("product-name").value = "";
+        const reportValidity = vi.spyOn($("product-form"), "reportValidity");
+
+        submit($("product-form"));
+        await flush();
+
+        expect(reportValidity).toHaveBeenCalled();
+        expect(fetchMock).toHaveBeenCalledTimes(1); // solo la carga inicial
+        expect(document.querySelectorAll(".product-item")).toHaveLength(2);
+    });
+
     it("muestra el error y no agrega nada si la API rechaza el producto", async () => {
         const { fetchMock } = await load();
         fetchMock.mockResolvedValueOnce(textResponse(JSON.stringify({ mensaje: "Nombre repetido" }), 409));
