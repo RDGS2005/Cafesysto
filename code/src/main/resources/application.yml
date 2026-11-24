@@ -2,19 +2,26 @@ spring:
   application:
     name: cafeteria
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5432/cafesysto_db?stringtype=unspecified}}
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/cafeteria_db?stringtype=unspecified}
     username: ${DB_USER:postgres}
-    password: ${DB_PASSWORD:postgres}
+    password: ${DB_PASSWORD:1234}
   jpa:
     open-in-view: false
     hibernate:
-      ddl-auto: none   # el esquema se crea manualmente con el ddl
+      ddl-auto: none   # el esquema lo gestiona Flyweight
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+    locations: classpath:sql
 
 server:
+  address: 0.0.0.0
   port: 8080
 
 cafeteria:
-  correo-institucional-dominio: ${CAFETERIA_CORREO_DOMINIO}
+  correo-institucional-dominio: ${CAFETERIA_CORREO_DOMINIO:uni.edu.ec}
   admin:
     usuario: ${CAFETERIA_ADMIN_USUARIO:admin}
-    clave: ${CAFETERIA_ADMIN_CLAVE}
+    clave: ${CAFETERIA_ADMIN_CLAVE:admin123}
