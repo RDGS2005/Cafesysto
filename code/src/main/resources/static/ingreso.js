@@ -1,4 +1,4 @@
-import {baseAPI, storeUser, getUser, findResponseErrors} from "./util.js";
+import { baseAPI, storeUser, getUser, findResponseErrors, isValidCedula, isValidCelular } from "./util.js";
 
 (() => {
     "use strict";
@@ -6,12 +6,11 @@ import {baseAPI, storeUser, getUser, findResponseErrors} from "./util.js";
     /**
      * Redirige al usuario cuando inicia sesión o si ya la ha iniciado
      */
-    function redirectUser()
-    {
+    function redirectUser() {
         const user = getUser();
-        if(!user) return;
+        if (!user) return;
 
-        switch(user.rol) {
+        switch (user.rol) {
             case "CLIENTE":
                 window.location.replace("./cliente/cliente.html");
                 break;
@@ -86,6 +85,16 @@ import {baseAPI, storeUser, getUser, findResponseErrors} from "./util.js";
             clave: studentPassword.value
         };
 
+        if (!isValidCedula(registerInfo.cedula)) {
+            registerStatus.textContent = "La cédula no es válida";
+            return;
+        }
+
+        if (!isValidCelular(registerInfo.celular)) {
+            registerStatus.textContent = "El número de celular no es válido";
+            return;
+        }
+
         try {
             // Enviar los datos a la API para el registro
             const response = await fetch(clientAPI, {
@@ -93,11 +102,12 @@ import {baseAPI, storeUser, getUser, findResponseErrors} from "./util.js";
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(registerInfo)
             });
-            if (!response.ok) {await findResponseErrors(response)}
+            if (!response.ok) { await findResponseErrors(response) }
 
             // Indicar registro exitoso si no hay errores
             registerStatus.textContent = "Registro exitoso. Ya puede iniciar sesión";
             registerForm.reset();
+            loginForm.reset();
 
         } catch (error) {
             // Mostrar error al usuario
@@ -107,11 +117,17 @@ import {baseAPI, storeUser, getUser, findResponseErrors} from "./util.js";
 
     registerForm.addEventListener("submit", async (event) => {
         event.preventDefault();
+
+        if (!registerForm.checkValidity()) {
+            registerForm.reportValidity();
+            return;
+        }
+
         await registerClient();
     });
 
     /**
-     * Ingreso al sistema como cliente/estudiante, personal o adminsitrador
+     * Ingreso al sistema como cliente/estudiante, personal o administrador
      * @requires fetch a http://localhost:8080/api/auth
      */
     async function login() {
@@ -129,7 +145,7 @@ import {baseAPI, storeUser, getUser, findResponseErrors} from "./util.js";
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(loginInfo)
             });
-            if (!response.ok) {await findResponseErrors(response)}
+            if (!response.ok) { await findResponseErrors(response) }
 
             // Redirigir al usuario si inicia sesion sin errores
             const user = await response.json();
@@ -144,6 +160,12 @@ import {baseAPI, storeUser, getUser, findResponseErrors} from "./util.js";
 
     loginForm.addEventListener("submit", async (event) => {
         event.preventDefault();
+
+        if (!loginForm.checkValidity()) {
+            loginForm.reportValidity();
+            return;
+        }
+
         await login();
     });
 })();

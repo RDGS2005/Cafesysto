@@ -1,4 +1,4 @@
-import {baseAPI, authFetch} from "../util.js";
+import { baseAPI, authFetch, getUser, storeUser, isValidCedula, isValidCelular } from "../util.js";
 
 (() => {
     "use strict";
@@ -39,6 +39,16 @@ import {baseAPI, authFetch} from "../util.js";
             clave: staffPassword.value
         };
 
+        if (!isValidCedula(registerInfo.cedula)) {
+            staffStatus.textContent = "La cédula no es válida";
+            return;
+        }
+
+        if (!isValidCelular(registerInfo.celular)) {
+            staffStatus.textContent = "El número de celular no es válido";
+            return;
+        }
+
         try {
             // Enviar los datos a la API para el registro
             await authFetch(staffAPI, {
@@ -58,6 +68,12 @@ import {baseAPI, authFetch} from "../util.js";
 
     staffForm.addEventListener("submit", async (event) => {
         event.preventDefault();
+
+        if (!staffForm.checkValidity()) {
+            staffForm.reportValidity();
+            return;
+        }
+
         await registerStaff();
     });
 
@@ -80,9 +96,12 @@ import {baseAPI, authFetch} from "../util.js";
                 body: JSON.stringify(registerInfo)
             });
 
-            // Indicar cambio exitoso si no hay errores
+            const user = getUser();
+            if (user) storeUser({ ...user, requiereCambioClave: false });
+
             passwordStatus.textContent = "Cambio de contraseña exitoso";
             passwordForm.reset();
+            location.reload();
 
         } catch (error) {
             // Mostrar error al usuario
@@ -92,6 +111,12 @@ import {baseAPI, authFetch} from "../util.js";
 
     passwordForm.addEventListener("submit", async (event) => {
         event.preventDefault();
+
+        if (!passwordForm.checkValidity()) {
+            passwordForm.reportValidity();
+            return;
+        }
+
         await changePassword();
     });
 

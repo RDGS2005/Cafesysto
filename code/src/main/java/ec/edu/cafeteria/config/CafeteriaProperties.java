@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * RFU-01: correo institucional de clientes.
  * RFU-06: credenciales iniciales del administrador.
  */
-@ConfigurationProperties(prefix = "cafeteria")
+@ConfigurationProperties(prefix = "cafesysto")
 public record CafeteriaProperties(
         String correoInstitucionalDominio,
         Admin admin) {

@@ -58,6 +58,20 @@ describe("findResponseErrors", () => {
             .rejects.toThrow("Cédula inválida");
     });
 
+    it("agrega los detalles de validación con el nombre legible del campo", async () => {
+        const body = JSON.stringify({
+            mensaje: "Datos de la solicitud no válidos",
+            detalles: ["clave: debe tener al menos 8 caracteres", "cedula: debe tener exactamente 10 dígitos"]
+        });
+        await expect(util.findResponseErrors(textResponse(body))).rejects.toThrow(
+            "Datos de la solicitud no válidos: Contraseña: debe tener al menos 8 caracteres; Cédula: debe tener exactamente 10 dígitos");
+    });
+
+    it("lanza solo el mensaje si los detalles están vacíos", async () => {
+        const body = JSON.stringify({ mensaje: "Cédula inválida", detalles: [] });
+        await expect(util.findResponseErrors(textResponse(body))).rejects.toThrow("Cédula inválida");
+    });
+
     it("lanza el texto completo si el JSON no tiene mensaje", async () => {
         const body = JSON.stringify({ otro: 1 });
         await expect(util.findResponseErrors(textResponse(body))).rejects.toThrow(body);
@@ -179,5 +193,57 @@ describe("showView", () => {
     it("no mueve el foco por defecto", () => {
         util.showView(panels, buttons, "b");
         expect(document.activeElement).toBe(document.body);
+    });
+});
+
+describe("isValidCedula", () => {
+    it("acepta cédulas con dígito verificador correcto", () => {
+        expect(util.isValidCedula("1710034065")).toBe(true);
+        expect(util.isValidCedula("0926687856")).toBe(true);
+    });
+
+    it("rechaza un dígito verificador incorrecto", () => {
+        expect(util.isValidCedula("1710034066")).toBe(false);
+    });
+
+    it("rechaza una provincia inválida", () => {
+        expect(util.isValidCedula("2510034065")).toBe(false);
+        expect(util.isValidCedula("0010034065")).toBe(false);
+    });
+
+    it("rechaza un tercer dígito mayor o igual a 6", () => {
+        expect(util.isValidCedula("1760034065")).toBe(false);
+    });
+
+    it("rechaza longitudes incorrectas, letras y valores no texto", () => {
+        expect(util.isValidCedula("171003406")).toBe(false);
+        expect(util.isValidCedula("17100340655")).toBe(false);
+        expect(util.isValidCedula("17100340a5")).toBe(false);
+        expect(util.isValidCedula("")).toBe(false);
+        expect(util.isValidCedula(1710034065)).toBe(false);
+        expect(util.isValidCedula(null)).toBe(false);
+    });
+
+    it("rechaza 0000000000", () => {
+        expect(util.isValidCedula("0000000000")).toBe(false);
+    });
+});
+
+describe("isValidCelular", () => {
+    it("acepta 10 dígitos que empiezan con 09", () => {
+        expect(util.isValidCelular("0991234567")).toBe(true);
+    });
+
+    it("rechaza otro prefijo", () => {
+        expect(util.isValidCelular("1234567890")).toBe(false);
+        expect(util.isValidCelular("0891234567")).toBe(false);
+    });
+
+    it("rechaza longitudes incorrectas, letras y valores no texto", () => {
+        expect(util.isValidCelular("099123456")).toBe(false);
+        expect(util.isValidCelular("09912345678")).toBe(false);
+        expect(util.isValidCelular("099123456a")).toBe(false);
+        expect(util.isValidCelular("")).toBe(false);
+        expect(util.isValidCelular(undefined)).toBe(false);
     });
 });

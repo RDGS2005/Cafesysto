@@ -2,16 +2,6 @@
 -- Cafetería universitaria - Script DDL
 -- Motor: PostgreSQL 18
 -- =====================================================================
--- Uso (desde psql, con un rol que pueda crear bases de datos):
---   psql -U postgres -f cafeteria_ddl.sql
--- Si la base ya existe, comenta las dos líneas siguientes y conéctate a ella.
--- =====================================================================
-
-CREATE DATABASE cafesysto_db
-    ENCODING 'UTF8'
-    TEMPLATE template0;
-
-\connect cafesysto_db
 
 -- ---------------------------------------------------------------------
 -- Tipos enumerados (RolUsuario, EstadoProducto, EstadoPedido)
