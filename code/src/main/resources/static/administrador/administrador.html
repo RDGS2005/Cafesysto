@@ -63,7 +63,7 @@
                         <label for="staff-id">Cédula</label>
                         <input id="staff-id" type="text" inputmode="numeric" maxlength="10" autocomplete="off"
                             aria-describedby="staff-id-hint staff-id-error" required>
-                        <p id="staff-id-hint" class="field-hint">10 números de la cédula ecuatoriana, sin guiones.</p>
+                        <p id="staff-id-hint" class="field-hint">10 números, sin guiones.</p>
                         <p id="staff-id-error" class="field-error" hidden></p>
                     </div>
                     <div class="field">
@@ -149,7 +149,7 @@
         </div>
     </footer>
     <script type="module">
-        import { redirectUser, logout, showView } from "../util.js";
+        import { redirectUser, logout, showView, getUser } from "../util.js";
 
         (() => {
 
@@ -165,6 +165,8 @@
                 button.addEventListener("click", () => showView(panels, navButtons, button.dataset.view, { moveFocus: true }));
             });
 
+            logoutButton.addEventListener("click", () => logout());
+
             const user = getUser();
             const mustChangePassword = user?.requiereCambioClave === true;
 
@@ -177,8 +179,6 @@
             } else {
                 showView(panels, navButtons, "home");
             }
-
-            logoutButton.addEventListener("click", () => logout());
 
             document.querySelectorAll('.toggle-password').forEach((cb) => {
                 cb.addEventListener('change', () => {
