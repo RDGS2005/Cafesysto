@@ -1,8 +1,8 @@
 spring:
   application:
-    name: cafeteria
+    name: Cafesysto
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5432/cafeteria_db?stringtype=unspecified}
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/cafesysto_db?stringtype=unspecified}
     username: ${DB_USER:postgres}
     password: ${DB_PASSWORD:1234}
   jpa:
@@ -20,8 +20,8 @@ server:
   address: 0.0.0.0
   port: 8080
 
-cafeteria:
-  correo-institucional-dominio: ${CAFETERIA_CORREO_DOMINIO:uni.edu.ec}
+cafesysto:
+  correo-institucional-dominio: ${CAFESYSTO_CORREO_DOMINIO:uni.edu.ec}
   admin:
-    usuario: ${CAFETERIA_ADMIN_USUARIO:admin}
-    clave: ${CAFETERIA_ADMIN_CLAVE:admin123}
+    usuario: ${CAFESYSTO_ADMIN_USUARIO:admin}
+    clave: ${CAFESYSTO_ADMIN_CLAVE:admin123}
