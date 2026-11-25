@@ -30,7 +30,20 @@
 
 ### 1.1. ¿Cómo registrarse?
 
+1. Ingrese a Cafesysto desde su navegador web y pulse el botón **Registro estudiantes**.
+2. Complete todos los campos obligatorios: **Nombre**, **Apellido**, **Cédula** (10 números, sin guiones), **Celular** (10 números, empieza con `09`), **Correo institucional** y **Contraseña** (mínimo 8 caracteres).
+3. Si desea revisar lo escrito en la clave, marque la casilla **Mostrar contraseña**.
+4. Pulse **Registrarme** y verifique el mensaje de confirmación `Registro exitoso. Ya puede iniciar sesión`.
+
+![Formulario de registro de estudiantes](./img/usuarios/1.1-registro-cliente.png)
+
 ### 1.2. ¿Cómo iniciar sesión?
+
+1. En la pantalla inicial de Cafesysto, escriba su **Correo** institucional y su **Contraseña** (puede marcar **Mostrar contraseña** si necesita comprobarla).
+2. Verifique que en **Tipo de usuario** esté seleccionada la opción **Estudiante**.
+3. Pulse **Iniciar sesión** para ingresar a su panel principal con acceso a **Menú** y **Mis pedidos**.
+
+![Inicio de sesión de estudiante](./img/usuarios/1.2-login-cliente.png)
 
 ### 1.3. ¿Cómo consultar el menú?
 
@@ -79,6 +92,13 @@
 ## 2. Personal
 
 ### 2.1. ¿Cómo iniciar sesión?
+
+1. Abra la pantalla inicial de Cafesysto.
+2. Ingrese el **Correo** y la **Contraseña** proporcionados por el Administrador.
+3. En el campo **Tipo de usuario**, seleccione **Personal**.
+4. Pulse **Iniciar sesión** para acceder a las secciones **Gestionar productos** y **Atender pedidos**.
+
+![Inicio de sesión de personal](./img/usuarios/2.1-login-personal.png)
 
 ### 2.2. ¿Cómo consultar los productos?
 
@@ -143,6 +163,26 @@
 
 ### 3.1. ¿Cómo iniciar sesión?
 
+1. Abra la pantalla inicial de Cafesysto.
+2. Ingrese el **Correo** y la **Contraseña** de Administrador.
+3. En **Tipo de usuario**, seleccione **Administrador** y pulse **Iniciar sesión**.
+4. Si ingresa por primera vez con la contraseña predeterminada, el sistema abrirá directamente la vista **Cambiar contraseña** y mantendrá deshabilitadas las demás opciones hasta completar el cambio.
+
+![Inicio de sesión de administrador](./img/usuarios/3.1-login-admin.png)
+
 ### 3.2. ¿Cómo cambiar la clave?
 
+1. En la barra superior del panel de Administrador, pulse **Cambiar contraseña** (en el primer acceso esta pantalla se abre de forma automática).
+2. Escriba su **Contraseña actual**.
+3. Ingrese la **Nueva contraseña** (mínimo 8 caracteres y distinta a la actual) y repítala exactamente en **Confirmar nueva contraseña**.
+4. Pulse **Cambiar contraseña**. Al completarse el cambio se habilitará el resto del menú y deberá usar la nueva clave en futuros ingresos.
+
+![Cambio de contraseña del administrador](./img/usuarios/3.2-cambiar-clave-admin.png)
+
 ### 3.3. ¿Cómo registrar a un miembro del personal?
+
+1. En el panel de Administrador (con la contraseña inicial ya actualizada), pulse **Registrar personal** en la barra superior.
+2. Llene los datos del empleado: **Nombre**, **Apellido**, **Cédula** (10 números, sin guiones), **Celular** (10 números, empieza con `09`), **Correo** (cualquier correo válido) y la **Contraseña** inicial (mínimo 8 caracteres).
+3. Pulse **Registrar** y confirme el mensaje `Registro exitoso de empleado`.
+
+![Registro de personal desde el panel de administrador](./img/usuarios/3.3-registrar-personal.png)
