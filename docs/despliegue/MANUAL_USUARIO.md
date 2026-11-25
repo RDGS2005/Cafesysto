@@ -34,6 +34,13 @@
 
 ### 1.3. ¿Cómo consultar el menú?
 
+1. Inicie sesión con su cuenta de Cliente.
+2. En la barra de navegación superior, pulse **Menú**.
+3. Revise los productos disponibles junto con su precio vigente y el selector de **Cantidad**.
+4. Los productos que el personal marque como no disponibles no se muestran en esta vista.
+
+![Consulta del menú por el cliente](./img/productos/1.3-consultar-menu.png)
+
 ### 1.4. ¿Cómo agregar productos (comida, bebida) a mi pedido?
 
 1. Ingrese a la pestaña **Menú** desde la barra de navegación superior del panel de Cliente.
@@ -75,11 +82,36 @@
 
 ### 2.2. ¿Cómo consultar los productos?
 
+1. Inicie sesión con su cuenta de **Personal** y pulse **Gestionar productos** en la barra superior.
+2. Desplácese a la sección **Productos** para ver el listado completo con código, nombre, precio actual y estado (**Disponible** o **No disponible**).
+
+![Lista de productos en el panel de personal](./img/productos/2.2-consultar-productos.png)
+
 ### 2.3. ¿Cómo registrar un nuevo producto (comida, bebida)?
+
+1. En **Gestionar productos**, ubique el formulario **Nuevo producto**.
+2. Escriba el **Nombre** del artículo (sin repetir uno existente) y su **Precio (USD)** mayor a cero.
+3. Deje marcada la casilla **Disponible** para mostrarlo de inmediato en el menú, o desmárquela si aún no estará a la venta.
+4. Pulse **Agregar producto** y verifique el mensaje `Producto registrado exitosamente`.
+
+![Registro de un nuevo producto](./img/productos/2.3-registrar-producto.png)
 
 ### 2.4. ¿Cómo cambiar el precio de un producto?
 
+1. En la lista **Productos** de la sección **Gestionar productos**, busque el producto que desea editar.
+2. Pulse el botón **Cambiar precio**.
+3. Escriba el nuevo valor numérico mayor a cero y pulse **Guardar** (o **Cancelar** para mantener el precio anterior).
+4. El nuevo precio se actualizará de inmediato en el menú de los clientes sin alterar los pedidos ya confirmados.
+
+![Edición del precio de un producto](./img/productos/2.4-cambiar-precio.png)
+
 ### 2.5. ¿Cómo cambiar la disponibilidad de un producto?
+
+1. En **Gestionar productos**, ubique el producto cuyo estado desea modificar.
+2. Pulse **Marcar no disponible** para ocultarlo del menú de los clientes, o **Marcar disponible** para habilitarlo nuevamente.
+3. Confirme el cambio en la etiqueta del producto y en el mensaje superior.
+
+![Cambio de disponibilidad de un producto](./img/productos/2.5-cambiar-disponibilidad.png)
 
 ### 2.6. ¿Cómo consultar los pedidos de los clientes?
 
