@@ -119,18 +119,30 @@ describe("cambio de contraseña", () => {
 
     it("envía actual, nueva y confirmación", async () => {
         const { fetchMock } = await load();
+    
+        vi.stubGlobal("location", {
+            reload: vi.fn()
+        });
+    
         fetchMock.mockResolvedValue(jsonResponse({}));
         fill();
-
+    
         submit($("password-form"));
         await flush();
-
+    
         const [url, options] = fetchMock.mock.calls[0];
+    
         expect(url).toBe("/api/auth/administrador/clave");
         expect(options.method).toBe("POST");
-        expect(JSON.parse(options.body)).toEqual({ actual: "vieja", nueva: "nueva", confirmacion: "nueva" });
+        expect(JSON.parse(options.body)).toEqual({
+            actual: "vieja",
+            nueva: "nueva",
+            confirmacion: "nueva"
+        });
+    
         expect($("password-status").textContent).toBe("Cambio de contraseña exitoso");
         expect($("new-password").value).toBe("");
+        expect(location.reload).toHaveBeenCalled();
     });
 
     it("quita la marca de cambio obligatorio de la sesión guardada", async () => {
