@@ -1,7 +1,7 @@
 # Flujo de Trabajo
 
-Versión: v1.3
-Autor: Equipo 6
+**Versión:** v1.3
+**Autor:** Equipo 6
 
 En este documento se describe la forma en la que se va a trabajar las contribuciones dentro del repositorio, es decir el flujo de trabajo.
 

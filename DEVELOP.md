@@ -1,7 +1,7 @@
 # Ambiente de Desarrollo
 
-Versión: v1.2
-Autor: Equipo 6
+**Versión:** v1.2
+**Autor:** Equipo 6
 
 En este documento se describe el entorno para el desarrollo del proyecto.
 

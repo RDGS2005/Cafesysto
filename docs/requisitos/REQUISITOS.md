@@ -1,7 +1,7 @@
 # Requisitos
 
-Versión: v1.1
-Autor: Equipo 6
+**Versión:** v1.1
+**Autor:** Equipo 6
 
 El presente documento sirve como un índice de los requisitos del sistema informático para la gestión de pedidos de la cafetería universitaria. Su propósito es exponer las necesidades del negocio, las funcionalidades del sistema y las condiciones que debe cumplir para facilitar la consulta del menú, el registro de pedidos anticipados y el seguimiento de estos hasta su entrega.
 
