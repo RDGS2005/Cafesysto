@@ -7,8 +7,8 @@ Comprobar que el Personal pueda consultar los pedidos recibidos en el tablero de
 ## Trazabilidad
 
 **Historia de Usuario:** RFP-05-1
-**Issue:** #4 (Requisitos), #36 (Pruebas)
-**Pull Request:** #7 (Requisitos), #32 (Implementación)
+**Issue:** #36
+**Pull Request:** Pendiente
 
 **Criterio(s) de aceptación relacionado(s):**
 - El personal puede consultar los pedidos e identificar cuáles están Pendientes.

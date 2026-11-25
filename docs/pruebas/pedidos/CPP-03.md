@@ -7,8 +7,8 @@ Comprobar que al confirmar una selección válida el pedido se registre en estad
 ## Trazabilidad
 
 **Historia de Usuario:** RFP-03
-**Issue:** #4 (Requisitos), #36 (Pruebas)
-**Pull Request:** #7 (Requisitos), #32 (Implementación)
+**Issue:** #36
+**Pull Request:** Pendiente
 
 **Criterio(s) de aceptación relacionado(s):**
 - Al revisar el resumen, el pedido todavía no se registra.

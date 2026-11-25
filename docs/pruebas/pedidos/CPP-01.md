@@ -7,8 +7,8 @@ Comprobar que el Cliente pueda añadir uno o más productos disponibles con sus 
 ## Trazabilidad
 
 **Historia de Usuario:** RFP-01
-**Issue:** #4 (Requisitos), #36 (Pruebas)
-**Pull Request:** #7 (Requisitos), #32 (Implementación)
+**Issue:** #36
+**Pull Request:** Pendiente
 
 **Criterio(s) de aceptación relacionado(s):**
 - Al seleccionar un producto disponible, este aparece en la selección del cliente.

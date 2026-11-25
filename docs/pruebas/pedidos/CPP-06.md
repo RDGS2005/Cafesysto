@@ -7,8 +7,8 @@ Comprobar que el Personal pueda avanzar un pedido únicamente en el orden **Pend
 ## Trazabilidad
 
 **Historia de Usuario:** RFP-05-2
-**Issue:** #4 (Requisitos), #36 (Pruebas)
-**Pull Request:** #7 (Requisitos), #32 (Implementación)
+**Issue:** #36
+**Pull Request:** Pendiente
 
 **Criterio(s) de aceptación relacionado(s):**
 - El personal puede tomar un pedido Pendiente y colocarlo a En preparación.

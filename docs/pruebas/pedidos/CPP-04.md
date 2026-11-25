@@ -7,8 +7,8 @@ Comprobar que el Cliente pueda consultar en **Mis pedidos** el último estado re
 ## Trazabilidad
 
 **Historia de Usuario:** RFP-04
-**Issue:** #4 (Requisitos), #36 (Pruebas)
-**Pull Request:** #7 (Requisitos), #32 (Implementación)
+**Issue:** #36
+**Pull Request:** Pendiente
 
 **Criterio(s) de aceptación relacionado(s):**
 - Al consultar uno de sus pedidos confirmados, el cliente ve el último estado registrado para ese pedido.

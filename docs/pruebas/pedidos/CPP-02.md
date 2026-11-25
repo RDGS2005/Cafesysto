@@ -7,8 +7,8 @@ Comprobar que el Cliente pueda revisar los productos seleccionados, sus subtotal
 ## Trazabilidad
 
 **Historia de Usuario:** RFP-02
-**Issue:** #4 (Requisitos), #36 (Pruebas)
-**Pull Request:** #7 (Requisitos), #32 (Implementación)
+**Issue:** #36
+**Pull Request:** Pendiente
 
 **Criterio(s) de aceptación relacionado(s):**
 - Al revisar una selección válida, el cliente ve el importe total antes de confirmar el pedido.
