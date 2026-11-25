@@ -1,6 +1,6 @@
 # Requisitos
 
-Versión: v1.0
+Versión: v1.1
 Autor: Equipo 6
 
 El presente documento sirve como un índice de los requisitos del sistema informático para la gestión de pedidos de la cafetería universitaria. Su propósito es exponer las necesidades del negocio, las funcionalidades del sistema y las condiciones que debe cumplir para facilitar la consulta del menú, el registro de pedidos anticipados y el seguimiento de estos hasta su entrega.
@@ -34,7 +34,6 @@ El presente documento sirve como un índice de los requisitos del sistema inform
     - [Módulo de Pedidos](#módulo-de-pedidos)
   - [Requisitos No Funcionales](#requisitos-no-funcionales)
   - [Identificación y Versionamiento de Requisitos](#identificación-y-versionamiento-de-requisitos)
-  - [Matriz de Trazabilidad](#matriz-de-trazabilidad)
   - [Trazabilidad](#trazabilidad)
 
 ## Contexto
@@ -203,32 +202,6 @@ El propósito de este módulo es gestionar los pedidos, permitir el registro de 
 4. Todo nuevo requisito empieza con versión v1.0.
 5. Si un requisito con versión vx.y sufre una modificación leve de contenido, su versión cambia a vx.[y + 1], por ejemplo de v1.0 a v1.1.
 6. Si un requisito con versión vx.y sufre una modificación completa de contenido, su versión cambia a v[x + 1].y, por ejemplo de v1.0 a v2.0.
-
-## Matriz de Trazabilidad
-
-| Requisito | Versión | Módulo | Origen | \#Issue | \#Pull Request | Caso de Prueba |
-| --- | --- | --- | --- | --- | --- | --- |
-| RFU-01 | v1.1 | Módulo de Usuarios | Equipo 6 | 1 | 9 | Pendiente |
-| RFU-02 | v2.0 | Módulo de Usuarios | Equipo 6 | 1 | 9 | Pendiente |
-| RFU-04 | v2.0 | Módulo de Usuarios | Equipo 6 | 1 | 9 | Pendiente |
-| RFU-05 | v1.1 | Módulo de Usuarios | Equipo 6 | 1 | 9 | Pendiente |
-| RFU-06 | v1.0 | Módulo de Usuarios | Equipo 6 | 1 | 9 | Pendiente |
-| RFM-01 | v1.1 | Módulo de Productos | RU-01 | 2 | 8 | Pendiente |
-| RFM-02 | v1.0 | Módulo de Productos | RU-06 | 2 | 8 | Pendiente |
-| RFM-03-1 | v1.1 | Módulo de Productos | RU-06 | 2 | 8 | Pendiente |
-| RFM-03-2 | v1.1 | Módulo de Productos | RU-06 | 2 | 8 | Pendiente |
-| RFP-01 | v1.0 | Módulo de Pedidos | RU-02 | 4 | 7 | Pendiente |
-| RFP-02 | v1.1 | Módulo de Pedidos | RU-03 | 4 | 7 | Pendiente |
-| RFP-03 | v1.1 | Módulo de Pedidos | RU-04 | 4 | 7 | Pendiente |
-| RFP-04 | v1.0 | Módulo de Pedidos | RU-05 | 4 | 7 | Pendiente |
-| RFP-05-1 | v1.1 | Módulo de Pedidos | RU-07 | 4 | 7 | Pendiente |
-| RFP-05-2 | v1.1 | Módulo de Pedidos | RU-07 | 4 | 7 | Pendiente |
-| RNF-01 | v1.0 | Módulo de Productos | Equipo 6 | 3 | 6 | Pendiente |
-| RNF-02 | v1.0 | Módulo de Pedidos | Equipo 6 | 3 | 6 | Pendiente |
-| RNF-03 | v1.0 | Todos | Equipo 6 | 3 | 6 | Pendiente |
-| RNF-04 | v1.0 | Todos | Equipo 6 | 3 | 6 | Pendiente |
-| RNF-05 | v1.0 | Todos | Equipo 6 | 3 | 6 | Pendiente |
-| RNF-06 | v1.0 | Todos | Equipo 6 | 3 | 6 | Pendiente |
 
 ## Trazabilidad
 
