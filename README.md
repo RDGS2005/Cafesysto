@@ -52,6 +52,8 @@ Cafesysto/
 |   |   ├── img/                                # Recursos de imagen para los manuales
 |   |   ├── MANUAL_USUARIO.md                   # Manual de usuario
 |   |   └── MANUAL_INSTALACIÓN.md               # Manual de instalación
+|   ├── implementación/                         # Documentación técnica de código
+|   |   └── javadoc/                            # Documentación técnica Javadoc
 |   ├── modelado/                               # Documentación de diseño
 |   |   ├── pedidos/                            # Documentación de diseño del módulo de pedidos
 |   |   ├── productos/                          # Documentación de diseño del módulo de productos

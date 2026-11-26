@@ -26,6 +26,7 @@ En este documento se describe el entorno para el desarrollo del proyecto.
   - [Comandos de compilación, pruebas y ejecución](#comandos-de-compilación-pruebas-y-ejecución)
     - [Compilar el backend](#compilar-el-backend)
     - [Ejecutar las pruebas](#ejecutar-las-pruebas)
+    - [Generar la documentación Javadoc](#generar-la-documentación-javadoc)
   - [Análisis estático y reporte de cobertura con SonarQube](#análisis-estático-y-reporte-de-cobertura-con-sonarqube)
     - [Generar y publicar el análisis](#generar-y-publicar-el-análisis)
     - [Ejecutar la aplicación](#ejecutar-la-aplicación)
@@ -98,6 +99,7 @@ El [`pom.xml`](./code/pom.xml) configura los siguientes plugins:
 | `spring-boot-maven-plugin` | Gestionada por Spring Boot 3.5.7 | Ejecuta la aplicación con `spring-boot:run` y empaqueta el artefacto ejecutable. Excluye Lombok del paquete final. |
 | `jacoco-maven-plugin` | 0.8.13 | Prepara el agente para recoger cobertura durante las pruebas y genera el informe en la fase `verify` (`target/site/jacoco`). |
 | `exec-maven-plugin` | 3.5.0 | Ejecuta `npm ci` en la fase `initialize` y `npm run coverage` en la fase `test`. |
+| `maven-javadoc-plugin` | 3.12.0 | Genera la documentación Javadoc de las clases públicas de Java. |
 
 El `spring-boot-starter-parent` también gestiona los plugins estándar del ciclo de vida de Maven, como el compilador y el ejecutor de pruebas; no están declarados directamente en este [`pom.xml`](./code/pom.xml).
 
@@ -164,6 +166,16 @@ Informe de cobertura Java con JaCoCo (también ejecuta las pruebas y la cobertur
 ```
 
 El informe HTML se genera en `code/target/site/jacoco/index.html`.
+
+### Generar la documentación Javadoc
+
+Desde la raíz del repositorio, ejecutar:
+
+```powershell
+.\code\mvnw.cmd -f .\code\pom.xml javadoc:javadoc
+```
+
+El plugin `maven-javadoc-plugin` versión 3.12.0 genera la documentación pública de las clases Java en `code/target/site/apidocs/`. El punto de entrada es `code/target/site/apidocs/index.html`.
 
 ## Análisis estático y reporte de cobertura con SonarQube
 
