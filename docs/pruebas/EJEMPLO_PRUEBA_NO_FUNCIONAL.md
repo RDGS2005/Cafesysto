@@ -1,62 +1,65 @@
-# PNF-001 — Nombre de la prueba
+# CPNF-000 — Nombre de la prueba
 
-## Información general
+## Descripción
 
 | Campo | Descripción |
 |---|---|
-| **Tipo de prueba** | Estática / Carga / Estrés / Rendimiento / Seguridad / Usabilidad / Otra |
-| **Componente evaluado** | Módulo, servicio o componente del sistema |
+| **Tipo de prueba** | Carga / Estrés / Rendimiento / Seguridad / Usabilidad / Responsividad / Análisis Estático / Otra |
+| **Herramienta** | Herramienta o conjunto de herramientas utilizadas |
+| **Componente evaluado** | Módulo, servicio, endpoint o interfaz evaluado |
 | **Objetivo** | Qué se pretende evaluar o comprobar |
-| **Responsable** | Nombre del responsable |
-| **Fecha** | AAAA-MM-DD |
 
 ## Trazabilidad
 
-- **Requisito no funcional:** Identificadores de los requisitos no funcionales.
-- **Issue:** Número(s) de los Issues relacionados.
-- **Pull Request:** Número(s) de los Pull Requests relacionados.
-- **Criterio de aceptación:** Criterios que permiten determinar si la prueba cumple su objetivo.
+**Requisito no funcional:** RNF-00  
+**Issue:** #0  
+**Pull Request:** Pendiente
 
-## Diseño de la prueba
+**Criterio(s) de aceptación relacionado(s):**
+- Criterio que permite determinar si la prueba cumple su objetivo
 
-Describir qué se va a evaluar y cómo se realizará la prueba.
+## Procedimiento de prueba
 
-Incluir, según corresponda:
+### Preparación
 
-- **Escenario:** Situación o condición que se desea evaluar.
-- **Procedimiento:** Pasos, operaciones o acciones que se ejecutarán.
-- **Carga de trabajo:** Cantidad de usuarios, solicitudes, procesos o datos involucrados.
-- **Duración:** Tiempo durante el cual se ejecutará la prueba.
-- **Variables y parámetros:** Valores que se modificarán o controlarán.
-- **Métricas:** Indicadores que se utilizarán para evaluar los resultados.
+1. Describir la preparación necesaria para ejecutar la prueba.
+2. Configurar el entorno, las herramientas y los datos requeridos.
+3. Indicar los comandos o archivos relevantes según corresponda.
 
-## Resultados y análisis
+### Ejecución
 
-Describir los resultados obtenidos durante la prueba.
+1. Describir los pasos generales que se seguirán para ejecutar la prueba.
+2. Indicar cómo se modifican los parámetros o cargas.
+3. Ejecutar la aplicación y la herramienta de evaluación.
+4. Esperar a que termine la evaluación y generar el reporte.
 
-Se pueden incluir:
+## Ejecuciones del Caso de Prueba
 
-- Valores medidos y métricas obtenidas.
-- Comportamiento observado.
-- Incidencias o anomalías detectadas.
-- Comparación con los criterios de evaluación.
-- Interpretación de los resultados.
-- Posibles causas de los problemas identificados.
+### Ejecución 1
 
-## Evidencias
+**Fecha:** AAAA-MM-DD  
+**Responsable:** Nombre del responsable
 
-Adjuntar o referenciar los elementos que permitan verificar la ejecución de la prueba.
+#### Parámetros
 
-Ejemplos:
-- Capturas de pantalla.
-- Informes generados por herramientas.
-- Archivos de registro (logs).
-- Gráficas de rendimiento.
-- Reportes de análisis estático.
-- Resultados de herramientas de monitoreo.
+- **Parámetro 1:** Valor utilizado
+- **Parámetro 2:** Valor utilizado
+
+#### Resultados obtenidos
+
+Describir los valores medidos, el comportamiento observado y su comparación con el criterio de aceptación.
+
+#### Estado
+
+- [X] Aprobado
+- [ ] Reprobado
+
+#### Capturas o evidencias
+
+![Descripción de la evidencia](./img/cpnf-000-ejecucion1.png)
+
+---
 
 ## Observaciones
 
-- La sección de diseño deben adaptarse al tipo de prueba realizada.
-- No es obligatorio completar todos los campos cuando no sean aplicables.
-- Se deben conservar las evidencias y resultados de cada ejecución.
+- Registrar las conclusiones generales o recomendaciones obtenidas de las ejecuciones.
