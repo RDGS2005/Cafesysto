@@ -9,7 +9,7 @@ export const options = {
     ],
     thresholds: {
         http_req_failed: ["rate<0.01"],     // menos de 1 % de errores
-        http_req_duration: ["p(95)<2000"]    // el 95 % responde en menos de 500 ms
+        http_req_duration: ["p(95)<2000"]    // el 95 % responde en menos de 2000 ms
     }
 };
 
