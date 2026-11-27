@@ -1,6 +1,6 @@
 # Flujo de Trabajo
 
-**Versión:** v1.3
+**Versión:** v1.4
 **Autor:** Equipo 6
 
 En este documento se describe la forma en la que se va a trabajar las contribuciones dentro del repositorio, es decir el flujo de trabajo.
@@ -96,6 +96,7 @@ Una vez completados los hitos en la rama *develop* se crea una rama para el *rel
 ### Estrategia de Ramificación
 
 * main - Para versiones funcionales
+* documentacion - Para documentos
 * develop - Para cada hito
 * doc/usuarios - Para requisitos, diseño y pruebas del Módulo de Usuarios
 * doc/productos - Para requisitos, diseño y pruebas del Módulo de Productos
@@ -221,9 +222,15 @@ gitGraph
     merge doc/pedidos
     merge doc/soporte
 
+    branch documentacion
+    checkout documentacion
+    commit id: "Documentos"
+
+    checkout develop
+
     branch release/1.0.0
     checkout release/1.0.0
-    commit id: "Despliegue"
+    commit id: "Codigo estable"
 
     checkout main
     merge release/1.0.0 tag: "v1.0.0"
