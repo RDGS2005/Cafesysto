@@ -14,7 +14,7 @@ Sistema web para la gestión de pedidos de una cafetería universitaria. Permite
 * [Documentación de Diseño](./modelado/)
 * [Documentación de Ambiente](./DEVELOP.md)
 * [Documentación de Flujo de Trabajo](./CONTRIBUTING.md)
-* [Documentación Técnica](./implementacion/)
+* [Documentación Técnica](https://rdgs2005.github.io/Cafesysto/)
 * [Reporte de Análisis Estático de Código](./pruebas/sonarqube/REPORTE_SONARQUBE.md)
 * [Documentación de Casos de Prueba](./pruebas/)
 * [Manual de Instalación](./despliegue/MANUAL_INSTALACION.md)
