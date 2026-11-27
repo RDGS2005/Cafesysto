@@ -4,13 +4,18 @@
 
 Comprobar que un miembro del Personal registrado pueda iniciar sesión seleccionando **Personal** en **Tipo de usuario**, y que ante credenciales erróneas se muestre un mensaje de error genérico.
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
-**Historia de Usuario:** RFU-04
-**Issue:** #34
-**Pull Request:** Pendiente
+- Historia de Usuario: RFU-04
+- Issue: #34
+- Pull Request: #41
 
 **Criterio(s) de aceptación relacionado(s):**
+
 - El sistema solicita las credenciales del Personal (correo y contraseña).
 - Si las credenciales son correctas, el sistema permite el acceso.
 - Si las credenciales son incorrectas o el usuario no existe, el sistema muestra un mensaje de error genérico sin revelar cuál dato falló.

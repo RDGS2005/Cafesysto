@@ -4,13 +4,18 @@
 
 Comprobar que el sistema valide correctamente los datos personales al registrar un nuevo Cliente (estudiante o docente), rechace cédulas inválidas y registros duplicados, y guarde al usuario cuando todos los campos cumplen las reglas definidas.
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
-**Historia de Usuario:** RFU-01
-**Issue:** #34
-**Pull Request:** Pendiente
+- Historia de Usuario: RFU-01
+- Issue: #34
+- Pull Request: #41
 
 **Criterio(s) de aceptación relacionado(s):**
+
 - El sistema solicita nombre, apellido, cédula, celular, correo institucional y contraseña.
 - Todos los campos son obligatorios; si falta alguno, el registro no se completa y se indica el campo faltante.
 - El sistema valida el formato de la cédula, del celular y del correo institucional.

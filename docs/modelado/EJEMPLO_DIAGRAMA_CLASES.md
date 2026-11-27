@@ -1,5 +1,15 @@
 # DCF — Diagrama de Clases Módulo de Facturación
 
+
+## Versión
+
+v1.0
+
+## Trazabilidad
+
+- Issue: #1
+- Pull Request: #2
+
 ## Diagrama
 
 ```mermaid
@@ -102,15 +112,6 @@ Factura "1" --> "0..*" Pago : registra
 Factura --> EstadoFactura : estado
 
 ```
-
-## Versión
-
-v1.0
-
-## Trazabilidad
-
-- Issue: #1
-- Pull Request: #2
 
 ## Observaciones
 

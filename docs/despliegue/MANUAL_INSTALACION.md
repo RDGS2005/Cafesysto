@@ -1,7 +1,7 @@
 # Manual de Instalación
 
-**Versión:** v1.0  
-**Autor:** Equipo 6
+**Versión:** v1.0 <br>
+**Autor:** Equipo 6 <br>
 
 ## Requisitos
 

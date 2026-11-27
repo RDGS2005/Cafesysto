@@ -9,6 +9,10 @@
 | **Componente evaluado** | Módulo, servicio, endpoint o interfaz evaluado |
 | **Objetivo** | Qué se pretende evaluar o comprobar |
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
 **Requisito no funcional:** RNF-00  

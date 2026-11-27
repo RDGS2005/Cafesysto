@@ -14,6 +14,13 @@ Alta
 
 v1.1
 
+## Trazabilidad
+
+- Origen: Equipo 6
+- Issue: #1
+- Pull Request: #9
+- Casos de prueba: CPU-04
+
 ## Criterios de aceptación
 
 
@@ -29,13 +36,6 @@ v1.1
 
 N/A (decisión técnica).
 
-## Trazabilidad
-
-- Origen: Equipo 6
-- Issue: #1
-- Pull Request: #9
-- Casos de prueba: Pendiente 
-
 ## Observaciones
 
-Ninguna.
+- Ninguna.

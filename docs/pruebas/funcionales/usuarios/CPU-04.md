@@ -4,13 +4,18 @@
 
 Comprobar que el Administrador pueda registrar nuevos miembros del Personal asignándoles su correo (de cualquier dominio válido) y contraseña inicial, validando el formato de cédula y celular antes de guardar.
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
-**Historia de Usuario:** RFU-05
-**Issue:** #34
-**Pull Request:** Pendiente
+- Historia de Usuario: RFU-05
+- Issue: #34
+- Pull Request: #41
 
 **Criterio(s) de aceptación relacionado(s):**
+
 - El sistema solicita nombre, apellido, cédula, celular, correo y contraseña del Personal.
 - El sistema valida el formato de la cédula, del celular y del correo.
 - Los datos del personal se almacenan de forma persistente.

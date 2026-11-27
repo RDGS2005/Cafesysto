@@ -14,6 +14,13 @@ Alta
 
 v2.0
 
+## Trazabilidad
+
+- Origen: Equipo 6
+- Issue: #1
+- Pull Request: #9
+- Casos de prueba: CPU-02
+
 ## Criterios de aceptación
 
 - [ ] El sistema solicita las credenciales del Cliente (correo institucional y contraseña).
@@ -25,13 +32,6 @@ v2.0
 ## Reglas de negocio relacionadas
 
 N/A (decisión técnica).
-
-## Trazabilidad
-
-- Origen: Equipo 6
-- Issue: #1
-- Pull Request: #9
-- Casos de prueba: Pendiente
 
 ## Observaciones
 

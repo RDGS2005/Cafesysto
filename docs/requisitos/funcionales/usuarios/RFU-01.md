@@ -14,6 +14,13 @@ Alta
 
 v1.1
 
+## Trazabilidad
+
+- Origen: Equipo 6
+- Issue: #1
+- Pull Request: #9
+- Casos de prueba: CPU-01
+
 ## Criterios de aceptación
 
 - [ ] El sistema solicita nombre, apellido, cédula, celular, correo institucional y contraseña.
@@ -28,13 +35,6 @@ v1.1
 ## Reglas de negocio relacionadas
 
 N/A (decisión técnica).
-
-## Trazabilidad
-
-- Origen: Equipo 6
-- Issue: #1
-- Pull Request: #9
-- Casos de prueba: Pendiente
 
 ## Observaciones
 

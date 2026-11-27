@@ -14,6 +14,13 @@ Alta
 
 v1.1
 
+## Trazabilidad
+
+- Origen: RU-04
+- Issue: #4
+- Pull Request: #7
+- Casos de prueba: CPP-03
+
 ## Criterios de aceptación
 
 - [ ] Al revisar el resumen, el pedido todavía no se registra.
@@ -28,15 +35,8 @@ v1.1
 - RN-NEG-01: Un pedido debe incluir al menos un producto y cada cantidad debe ser un número entero positivo. 
 - RN-NEG-04: El precio registrado para un producto en un pedido no cambia si posteriormente se modifica el precio del menú.
 - RN-NEG-05: Cada pedido confirmado debe recibir un código de retiro único. 
-- RN-NEG-06: Un pedido confirmado inicia en estado Pendiente y puede pasar a En preparación, Listo para retirar y Entregado, en ese orden. 
-
-## Trazabilidad
-
-- Origen: RU-04
-- Issue: #4
-- Pull Request: #7
-- Casos de prueba: Pendiente
+- RN-NEG-06: Un pedido confirmado inicia en estado Pendiente y puede pasar a En preparación, Listo para retirar y Entregado, en ese orden.
 
 ## Observaciones
 
-Se debe decidir si la aplicación permitirá editar la selección de productos en el pedido una vez el cliente se ha movido a la revisión del importe total, ya que no se menciona como un requisito pero podría aportar valor al usuario.
+- Se debe decidir si la aplicación permitirá editar la selección de productos en el pedido una vez el cliente se ha movido a la revisión del importe total, ya que no se menciona como un requisito pero podría aportar valor al usuario.

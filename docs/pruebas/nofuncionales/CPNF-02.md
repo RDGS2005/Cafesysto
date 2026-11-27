@@ -9,13 +9,18 @@
 | **Componente evaluado** | Endpoint /api/pedidos/mis-pedidos |
 | **Objetivo** | Medir el tiempo de respuesta de consultas a los pedidos |
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
-**Requisito no funcional:** RNF-02
-**Issue:** #37
-**Pull Request:** Pendiente
+- Requisito no funcional: RNF-02
+- Issue: #37
+- Pull Request: #42
 
 **Criterio(s) de aceptación relacionado(s):**
+
 - Tiempo transcurrido desde la solicitud de información del pedido hasta que la información se encuentre disponible en la interfaz menor a 2 segundos
 
 ## Procedimiento de prueba

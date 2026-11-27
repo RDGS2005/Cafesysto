@@ -4,13 +4,18 @@
 
 Comprobar que el Personal pueda avanzar un pedido únicamente en el orden **Pendiente → En preparación → Listo para retirar → Entregado**, y que el sistema impida entregar un pedido antes de estar listo o con un código de retiro incorrecto.
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
-**Historia de Usuario:** RFP-05-2
-**Issue:** #36
-**Pull Request:** Pendiente
+- Historia de Usuario: RFP-05-2
+- Issue: #36
+- Pull Request: #39
 
 **Criterio(s) de aceptación relacionado(s):**
+
 - El personal puede tomar un pedido Pendiente y colocarlo a En preparación.
 - El personal puede tomar un pedido En preparación y colocarlo en Listo para retirar.
 - El personal puede marcar un pedido como Entregado solo si está Listo para retirar y el cliente presenta el código de retiro correspondiente a ese pedido.

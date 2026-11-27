@@ -14,6 +14,13 @@ Alta
 
 v1.0
 
+## Trazabilidad
+
+- Origen: Equipo 6
+- Issue: #1
+- Pull Request: #9
+- Casos de prueba: CPU-03 
+
 ## Criterios de aceptación
 
 - [ ] El sistema solicita la contraseña actual; si no coincide, rechaza el cambio, informa el motivo y no modifica nada.
@@ -26,13 +33,6 @@ v1.0
 ## Reglas de negocio relacionadas
 
 N/A (decisión técnica).
-
-## Trazabilidad
-
-- Origen: Equipo 6
-- Issue: #1
-- Pull Request: #9
-- Casos de prueba: Pendiente 
 
 ## Observaciones
 

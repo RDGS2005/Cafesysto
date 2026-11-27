@@ -4,13 +4,18 @@
 
 Comprobar que en el primer acceso con la clave predeterminada el Administrador deba actualizar su contraseña obligatoriamente, rechazando confirmaciones que no coincidan e invalidando la contraseña anterior una vez completado el cambio.
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
-**Historia de Usuario:** RFU-06
-**Issue:** #34
-**Pull Request:** Pendiente
+- Historia de Usuario: RFU-06
+- Issue: #34
+- Pull Request: #41
 
 **Criterio(s) de aceptación relacionado(s):**
+
 - El sistema solicita la contraseña actual; si no coincide, rechaza el cambio, informa el motivo y no modifica nada.
 - La nueva contraseña debe ingresarse dos veces; si ambas no coinciden, el sistema informa el motivo y no realiza el cambio.
 - La nueva contraseña debe ser distinta de la contraseña actual.

@@ -1,5 +1,14 @@
 # DCM — Diagrama de Clases Módulo de Productos
 
+## Versión
+
+v1.0
+
+## Trazabilidad
+
+- Issue: #12
+- Pull Request: #16
+
 ## Diagrama
 
 ```mermaid
@@ -79,15 +88,6 @@ namespace Pedidos{
     DetallePedido "*" --> "1" Producto: referencia
 
 ```
-
-## Versión
-
-v1.0
-
-## Trazabilidad
-
-- Issue: #12
-- Pull Request: #16
 
 ## Observaciones
 

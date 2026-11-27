@@ -14,6 +14,13 @@ Alta
 
 v1.0
 
+## Trazabilidad
+
+- Origen: RU-01
+- Issue: #1
+- Pull Request: #2
+- Casos de prueba: Pendiente
+
 ## Criterios de aceptación
 
 - [ ] El sistema muestra los productos disponibles.
@@ -26,13 +33,6 @@ v1.0
 - RN-02: El sistema debe exponer los productos y sus precios.
 - Los productos no disponibles no pueden agregarse a nuevos pedidos.
 
-## Trazabilidad
-
-- Origen: RU-01
-- Issue: #1
-- Pull Request: #2
-- Casos de prueba: Pendiente
-
 ## Observaciones
 
-Espacio para aclaraciones o decisiones de análisis.
+- Espacio para aclaraciones o decisiones de análisis.

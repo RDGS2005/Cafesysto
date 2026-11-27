@@ -4,11 +4,15 @@
 
 Comprobar que el Personal pueda cambiar el estado de un producto de **Disponible** a **No disponible** y viceversa, reflejando inmediatamente su ocultamiento y reaparición en el menú del cliente.
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
-**Historia de Usuario:** RFM-03-2
-**Issue:** #35
-**Pull Request:** Pendiente
+- Historia de Usuario: RFM-03-2
+- Issue: #35
+- Pull Request: #40
 
 **Criterio(s) de aceptación relacionado(s):**
 - El sistema permite seleccionar un producto existente del menú para su edición.

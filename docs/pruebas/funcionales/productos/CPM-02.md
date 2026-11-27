@@ -4,13 +4,18 @@
 
 Comprobar que el Cliente pueda consultar el menú visualizando exclusivamente los productos marcados como **Disponible** con su nombre y precio vigente, ocultando los artículos en estado **No disponible**.
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
-**Historia de Usuario:** RFM-01
-**Issue:** #35
-**Pull Request:** Pendiente
+- Historia de Usuario: RFM-01
+- Issue: #35
+- Pull Request: #40
 
 **Criterio(s) de aceptación relacionado(s):**
+
 - El sistema muestra todos los productos marcados como "Disponible".
 - Cada producto muestra su nombre y su precio.
 - Los productos no disponibles no se muestran en el menú para evitar confusión con el cliente.
