@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ingreso.css">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <title>Cafesysto · Ingreso</title>
+</head>
+
+<body>
+    <main class="auth-page">
+        <!-- Panel de imagen. La ruta de la imagen se cambia en ingreso.css (variable --auth-image). -->
+        <div class="auth-image" aria-hidden="true"></div>
+
+        <!-- Panel de inicio de sesión / registro -->
+        <div class="auth-panel">
+            <div class="auth-card">
+                <!-- Inicio de sesión -->
+                <section id="view-login" aria-labelledby="login-title">
+                    <p class="eyebrow">Cafesysto</p>
+                    <h1 id="login-title" tabindex="-1">Iniciar sesión</h1>
+
+                    <form id="login-form" novalidate>
+                        <div class="form-grid">
+                            <div class="field field-wide">
+                                <label for="login-email">Correo</label>
+                                <input id="login-email" type="email" maxlength="80" autocomplete="username"
+                                    aria-describedby="login-email-error" required>
+                                <p id="login-email-error" class="field-error" hidden></p>
+                            </div>
+                            <div class="field field-wide">
+                                <label for="login-password">Contraseña</label>
+                                <input id="login-password" type="password" maxlength="64"
+                                    autocomplete="current-password" aria-describedby="login-password-error" required>
+                                <p id="login-password-error" class="field-error" hidden></p>
+                                <label class="show-password">
+                                    <input type="checkbox" class="toggle-password" data-target="login-password">
+                                    Mostrar contraseña
+                                </label>
+                            </div>
+                            <div class="field field-wide">
+                                <label for="login-role">Tipo de usuario</label>
+                                <select id="login-role" name="role" required>
+                                    <option value="" disabled>Selecciona un tipo de usuario</option>
+                                    <option value="cliente" selected>Estudiante</option>
+                                    <option value="personal">Personal</option>
+                                    <option value="administrador">Administrador</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button id="login-submit" class="btn btn-block" type="submit">Iniciar sesión</button>
+                    </form>
+
+                    <p id="login-status" class="status" role="status" aria-live="polite"></p>
+
+                    <button id="show-register" class="btn btn-secondary btn-block" type="button">Registro
+                        estudiantes</button>
+                </section>
+
+                <!-- Registro de estudiantes -->
+                <section id="view-register" aria-labelledby="register-title" hidden>
+                    <p class="eyebrow">Cafesysto</p>
+                    <h1 id="register-title" tabindex="-1">Registro de estudiantes</h1>
+
+                    <form id="register-form" novalidate>
+                        <div class="form-grid">
+                            <div class="field">
+                                <label for="student-first-name">Nombre</label>
+                                <input id="student-first-name" type="text" maxlength="40" autocomplete="given-name"
+                                    aria-describedby="student-first-name-error" required>
+                                <p id="student-first-name-error" class="field-error" hidden></p>
+                            </div>
+                            <div class="field">
+                                <label for="student-last-name">Apellido</label>
+                                <input id="student-last-name" type="text" maxlength="40" autocomplete="family-name"
+                                    aria-describedby="student-last-name-error" required>
+                                <p id="student-last-name-error" class="field-error" hidden></p>
+                            </div>
+                            <div class="field">
+                                <label for="student-id">Cédula</label>
+                                <input id="student-id" type="text" inputmode="numeric" maxlength="10" autocomplete="off"
+                                    aria-describedby="student-id-hint student-id-error" required>
+                                <p id="student-id-hint" class="field-hint">10 números, sin guiones.</p>
+                                <p id="student-id-error" class="field-error" hidden></p>
+                            </div>
+                            <div class="field">
+                                <label for="student-phone">Celular</label>
+                                <input id="student-phone" type="tel" inputmode="numeric" maxlength="10"
+                                    autocomplete="tel-national"
+                                    aria-describedby="student-phone-hint student-phone-error" required>
+                                <p id="student-phone-hint" class="field-hint">10 números, empieza con 09.</p>
+                                <p id="student-phone-error" class="field-error" hidden></p>
+                            </div>
+                            <div class="field field-wide">
+                                <label for="student-email">Correo institucional</label>
+                                <input id="student-email" type="email" maxlength="80" autocomplete="email"
+                                    aria-describedby="student-email-error" required>
+                                <p id="student-email-error" class="field-error" hidden></p>
+                            </div>
+                            <div class="field field-wide">
+                                <label for="student-password">Contraseña</label>
+                                <input id="student-password" type="password" maxlength="64" autocomplete="new-password"
+                                    aria-describedby="student-password-hint student-password-error" required>
+                                <p id="student-password-hint" class="field-hint">Mínimo 8 caracteres.</p>
+                                <p id="student-password-error" class="field-error" hidden></p>
+                                <label class="show-password">
+                                    <input type="checkbox" class="toggle-password" data-target="student-password">
+                                    Mostrar contraseña
+                                </label>
+                            </div>
+                        </div>
+                        <button id="register-submit" class="btn btn-block" type="submit">Registrarme</button>
+                    </form>
+
+                    <p id="register-status" class="status" role="status" aria-live="polite"></p>
+
+                    <button id="show-login" class="btn btn-secondary btn-block" type="button">Ya tengo cuenta: iniciar
+                        sesión</button>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script type="module">
+        (() => {
+
+            document.querySelectorAll('.toggle-password').forEach((cb) => {
+                cb.addEventListener('change', () => {
+                    const input = document.getElementById(cb.dataset.target);
+                    if (!input) return;
+                    input.type = cb.checked ? 'text' : 'password';
+                });
+            });
+
+        })();
+    </script>
+    <script type="module" src="ingreso.js"></script>
+</body>
+
+</html>
