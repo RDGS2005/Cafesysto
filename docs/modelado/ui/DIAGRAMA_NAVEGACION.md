@@ -1,5 +1,14 @@
 # DN — Diagrama de Navegación
 
+## Versión
+
+v1.1
+
+## Trazabilidad
+
+- Issue: #14
+- Pull Request: #21
+
 ## Diagrama
 
 ```mermaid
@@ -31,15 +40,6 @@ stateDiagram-v2
 
 ```
 
-## Versión
-
-v1.1
-
-## Trazabilidad
-
-- Issue: #14
-- Pull Request: #21
-
 ## Observaciones
 
-Ninguna.
+- Ninguna.

@@ -9,11 +9,15 @@
 | **Componente evaluado** | Endpoint /api/productos/menu |
 | **Objetivo** | Medir el tiempo de respuesta de consultas al menú |
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
-**Requisito no funcional:** RNF-01
-**Issue:** #37
-**Pull Request:** Pendiente
+- Requisito no funcional: RNF-01
+- Issue: #37
+- Pull Request: Pendiente
 
 **Criterio(s) de aceptación relacionado(s):**
 - Tiempo transcurrido desde la solicitud del menú hasta que la información se encuentre disponible en la interfaz menor a 2 segundos

@@ -14,6 +14,13 @@ Alta
 
 v1.0
 
+## Trazabilidad
+
+- Origen: RU-05
+- Issue: #4
+- Pull Request: #7
+- Casos de prueba: Pendiente
+
 ## Criterios de aceptación
 
 - [ ] Al consultar uno de sus pedidos confirmados, el cliente ve el último estado registrado para ese pedido.
@@ -22,13 +29,6 @@ v1.0
 
 - RN-NEG-06: Un pedido confirmado inicia en estado Pendiente y puede pasar a En preparación, Listo para retirar y Entregado, en ese orden. 
 
-## Trazabilidad
-
-- Origen: RU-05
-- Issue: #4
-- Pull Request: #7
-- Casos de prueba: Pendiente
-
 ## Observaciones
 
-Ninguna.
+- Ninguna.

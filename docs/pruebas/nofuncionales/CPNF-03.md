@@ -9,11 +9,15 @@
 | **Componente evaluado** | Interfaz |
 | **Objetivo** | Verificar que la aplicación se adapte a la resolución de diferentes dispositivos |
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
-**Requisito no funcional:** RNF-03, RNF-04
-**Issue:** #37
-**Pull Request:** Pendiente
+- Requisito no funcional: RNF-03, RNF-04
+- Issue: #37
+- Pull Request: Pendiente
 
 **Criterio(s) de aceptación relacionado(s):**
 - Funcionamiento del sistema en computadoras de escritorio.

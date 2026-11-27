@@ -4,6 +4,10 @@
 
 Comprobar que en el primer acceso con la clave predeterminada el Administrador deba actualizar su contraseña obligatoriamente, rechazando confirmaciones que no coincidan e invalidando la contraseña anterior una vez completado el cambio.
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
 **Historia de Usuario:** RFU-06

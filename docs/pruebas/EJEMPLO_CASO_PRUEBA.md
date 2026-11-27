@@ -4,6 +4,10 @@
 
 Se espera comprobar que el sistema genere correctamente una factura cuando se registra una venta con datos válidos, mostrando la información correspondiente a la transacción.
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
 **Historia de Usuario:** RFF-01

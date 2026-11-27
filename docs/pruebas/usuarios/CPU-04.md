@@ -4,6 +4,10 @@
 
 Comprobar que el Administrador pueda registrar nuevos miembros del Personal asignándoles su correo (de cualquier dominio válido) y contraseña inicial, validando el formato de cédula y celular antes de guardar.
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
 **Historia de Usuario:** RFU-05

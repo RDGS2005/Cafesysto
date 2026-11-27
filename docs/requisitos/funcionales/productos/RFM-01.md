@@ -14,6 +14,13 @@ Alta
 
 v1.1
 
+## Trazabilidad
+
+- Origen: RU-01
+- Issue: #2
+- Pull Request: #8
+- Casos de prueba: Pendiente
+
 ## Criterios de aceptación
 
 - [ ] El sistema muestra todos los productos marcados como "Disponible".
@@ -26,13 +33,6 @@ v1.1
 - RN-NEG-02: Solo los productos marcados como disponibles pueden incluirse en nuevos pedidos.
 - Los productos no disponibles no pueden agregarse a nuevos pedidos.
 
-## Trazabilidad
-
-- Origen: RU-01
-- Issue: #2
-- Pull Request: #8
-- Casos de prueba: Pendiente
-
 ## Observaciones
 
-Las reglas de negocio incluidas en el análisis se relacionan con el requisito porque el mismo requisito es un tipo de precondición para que las reglas se cumplan. Por ejemplo, para que el cliente pueda incluir un producto disponible en un pedido (RN-NEG-02), es necesario que sepa cuáles productos son, efectivamente, disponibles, y eso lo hace consultando el menú.
+- Las reglas de negocio incluidas en el análisis se relacionan con el requisito porque el mismo requisito es un tipo de precondición para que las reglas se cumplan. Por ejemplo, para que el cliente pueda incluir un producto disponible en un pedido (RN-NEG-02), es necesario que sepa cuáles productos son, efectivamente, disponibles, y eso lo hace consultando el menú.

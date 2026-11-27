@@ -4,6 +4,10 @@
 
 Comprobar que el Cliente pueda añadir uno o más productos disponibles con sus cantidades al pedido en curso, conservando los artículos previamente agregados y rechazando cantidades menores a 1.
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
 **Historia de Usuario:** RFP-01

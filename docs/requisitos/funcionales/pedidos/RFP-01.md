@@ -14,6 +14,13 @@ Alta
 
 v1.0
 
+## Trazabilidad
+
+- Origen: RU-02
+- Issue: #4
+- Pull Request: #7
+- Casos de prueba: Pendiente
+
 ## Criterios de aceptación
 
 - [ ] Al seleccionar un producto disponible, este aparece en la selección del cliente.
@@ -27,13 +34,6 @@ v1.0
 - RN-NEG-01: Un pedido debe incluir al menos un producto y cada cantidad debe ser un número entero positivo.
 - RN-NEG-02: Solo los productos marcados como disponibles pueden incluirse en nuevos pedidos. 
 
-## Trazabilidad
-
-- Origen: RU-02
-- Issue: #4
-- Pull Request: #7
-- Casos de prueba: Pendiente
-
 ## Observaciones
 
-Ninguna.
+- Ninguna.

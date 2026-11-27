@@ -4,6 +4,10 @@
 
 Comprobar que un miembro del Personal registrado pueda iniciar sesión seleccionando **Personal** en **Tipo de usuario**, y que ante credenciales erróneas se muestre un mensaje de error genérico.
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
 **Historia de Usuario:** RFU-04

@@ -4,6 +4,10 @@
 
 Comprobar que un Cliente registrado pueda iniciar sesión seleccionando **Estudiante** en **Tipo de usuario**, y que ante credenciales incorrectas el sistema muestre un mensaje de error genérico sin revelar qué dato falló.
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
 **Historia de Usuario:** RFU-02

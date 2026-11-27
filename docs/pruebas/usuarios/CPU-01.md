@@ -4,6 +4,10 @@
 
 Comprobar que el sistema valide correctamente los datos personales al registrar un nuevo Cliente (estudiante o docente), rechace cédulas inválidas y registros duplicados, y guarde al usuario cuando todos los campos cumplen las reglas definidas.
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
 **Historia de Usuario:** RFU-01

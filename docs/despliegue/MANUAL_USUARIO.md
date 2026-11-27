@@ -1,7 +1,7 @@
 # Manual de Usuario
 
-**Versión:** v0.0
-**Autor:** Equipo 6
+**Versión:** v1.0 <br>
+**Autor:** Equipo 6 <br>
 
 - [Manual de Usuario](#manual-de-usuario)
   - [1. Cliente](#1-cliente)

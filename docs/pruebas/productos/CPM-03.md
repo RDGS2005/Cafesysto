@@ -4,6 +4,10 @@
 
 Comprobar que el Personal pueda editar el precio de un producto existente solo con valores mayores a cero, rechazando precios inválidos y reflejando el cambio en el menú del cliente.
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
 **Historia de Usuario:** RFM-03-1

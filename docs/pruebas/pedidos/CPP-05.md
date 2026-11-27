@@ -4,6 +4,10 @@
 
 Comprobar que el Personal pueda consultar los pedidos recibidos en el tablero de **Atender pedidos**, identificando los pedidos en estado **Pendiente** junto con su código de retiro, detalle de productos y monto total.
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
 **Historia de Usuario:** RFP-05-1

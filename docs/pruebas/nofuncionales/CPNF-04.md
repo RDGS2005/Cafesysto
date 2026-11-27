@@ -9,11 +9,15 @@
 | **Componente evaluado** | Backend + Frontend |
 | **Objetivo** | Determinar el porcentaje de cobertura de pruebas de código automatizadas tanto en backend como en frontend |
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
-**Requisito no funcional:** RNF-06
-**Issue:** #37
-**Pull Request:** Pendiente
+- Requisito no funcional: RNF-06
+- Issue: #37
+- Pull Request: Pendiente
 
 **Criterio(s) de aceptación relacionado(s):**
 - Métrica *Line Coverage* igual o superior al 80 %

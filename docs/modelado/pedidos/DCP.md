@@ -1,5 +1,14 @@
 # DCP — Diagrama de Clases Módulo de Pedidos
 
+## Versión
+
+v1.0
+
+## Trazabilidad
+
+- Issue: #13
+- Pull Request: #17
+
 ## Diagrama
 
 ```mermaid
@@ -136,15 +145,6 @@ namespace Usuarios {
     DetallePedido "*" --> "1" Producto : referencia
 
 ```
-
-## Versión
-
-v1.0
-
-## Trazabilidad
-
-- Issue: #13
-- Pull Request: #17
 
 ## Observaciones
 

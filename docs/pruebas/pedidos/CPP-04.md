@@ -4,6 +4,10 @@
 
 Comprobar que el Cliente pueda consultar en **Mis pedidos** el último estado registrado para sus pedidos confirmados conforme el Personal actualiza su preparación.
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
 **Historia de Usuario:** RFP-04

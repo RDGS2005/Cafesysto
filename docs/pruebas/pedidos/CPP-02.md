@@ -4,6 +4,10 @@
 
 Comprobar que el Cliente pueda revisar los productos seleccionados, sus subtotales y el **Importe total** calculado con los precios vigentes antes de confirmar el pedido.
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
 **Historia de Usuario:** RFP-02

@@ -4,6 +4,10 @@
 
 Comprobar que el Personal pueda avanzar un pedido únicamente en el orden **Pendiente → En preparación → Listo para retirar → Entregado**, y que el sistema impida entregar un pedido antes de estar listo o con un código de retiro incorrecto.
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
 **Historia de Usuario:** RFP-05-2

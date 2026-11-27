@@ -1,5 +1,14 @@
 # PUI — Prototipo de Interfaz de Usuario
 
+## Versión
+
+v1.0
+
+## Trazabilidad
+
+- Issue: #14
+- Pull Request: #21
+
 ## Pantallas de Usuario
 
 ### Ingreso al Sistema
@@ -120,15 +129,6 @@ Actualización de credenciales en dispositivo móvil
 
 ![Actualización de credenciales](./img/ActualizacionCredenciales_MOBILE.png)
 
-## Versión
-
-v1.0
-
-## Trazabilidad
-
-- Issue: #14
-- Pull Request: #21
-
 ## Observaciones
 
-Ninguna.
+- Ninguna.

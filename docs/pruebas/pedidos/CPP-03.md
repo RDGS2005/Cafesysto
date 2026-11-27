@@ -4,6 +4,10 @@
 
 Comprobar que al confirmar una selección válida el pedido se registre en estado **Pendiente** con un código único de retiro, y que un cambio posterior en el precio del menú no modifique el importe del pedido ya confirmado.
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
 **Historia de Usuario:** RFP-03

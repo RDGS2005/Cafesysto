@@ -4,6 +4,10 @@
 
 Comprobar que el Personal pueda registrar nuevos productos indicando nombre, precio mayor a cero y estado de disponibilidad, y que el sistema rechace nombres duplicados y precios menores o iguales a cero.
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
 **Historia de Usuario:** RFM-02

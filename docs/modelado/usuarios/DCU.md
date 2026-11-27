@@ -1,5 +1,14 @@
 # DCU — Diagrama de Clases Módulo de Usuarios
 
+## Versión
+
+v1.0
+
+## Trazabilidad
+
+- Issue: #11
+- Pull Request: #20
+
 ## Diagrama
 ```mermaid
 classDiagram
@@ -156,15 +165,6 @@ PedidoService ..> AutenticacionService : verifica identidad y rol
 ProductoService ..> AutenticacionService : exige PERSONAL
 Pedido "0..*" ..> "1" Cliente : referencia por codigoCliente
 ```
-
-## Versión
-
-v1.0
-
-## Trazabilidad
-
-- Issue: #11
-- Pull Request: #20
 
 ## Observaciones
 

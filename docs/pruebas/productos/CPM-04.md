@@ -4,6 +4,10 @@
 
 Comprobar que el Personal pueda cambiar el estado de un producto de **Disponible** a **No disponible** y viceversa, reflejando inmediatamente su ocultamiento y reaparición en el menú del cliente.
 
+## Versión
+
+v1.0
+
 ## Trazabilidad
 
 **Historia de Usuario:** RFM-03-2

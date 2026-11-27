@@ -1,5 +1,13 @@
 # DCG — Diagrama de Clases General
 
+**Versión:** v1.0 <br>
+**Autor:** Equipo 6 <br>
+
+## Trazabilidad
+
+- Issue: #15
+- Pull Request: #22
+
 ## Diagrama
 
 ```mermaid
@@ -296,15 +304,6 @@ namespace Pedidos {
     PedidoService ..> AutenticacionService : verifica identidad y rol
     ProductoService ..> AutenticacionService : exige PERSONAL
 ```
-
-## Versión
-
-v1.0
-
-## Trazabilidad
-
-- Issue: #15
-- Pull Request: #22
 
 ## Observaciones
 

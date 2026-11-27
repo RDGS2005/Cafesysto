@@ -14,6 +14,13 @@ Alta
 
 v1.0
 
+## Trazabilidad
+
+- Origen: RU-06
+- Issue: #2
+- Pull Request: #8
+- Casos de prueba: Pendiente
+
 ## Criterios de aceptación
 
 - [ ] El sistema permite añadir el nombre, el precio y el estado de un producto.
@@ -30,13 +37,6 @@ v1.0
 - Todo producto nuevo debe tener un precio asignado para poder ser guardado.
 - Cada producto tiene un código único que no se puede modificar.
 
-## Trazabilidad
-
-- Origen: RU-06
-- Issue: #2
-- Pull Request: #8
-- Casos de prueba: Pendiente
-
 ## Observaciones
 
-Ninguna.
+- Ninguna.
