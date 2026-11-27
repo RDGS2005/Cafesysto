@@ -5,9 +5,15 @@
 
 El presente documento sirve como un índice de los requisitos del sistema informático para la gestión de pedidos de la cafetería universitaria. Su propósito es exponer las necesidades del negocio, las funcionalidades del sistema y las condiciones que debe cumplir para facilitar la consulta del menú, el registro de pedidos anticipados y el seguimiento de estos hasta su entrega.
 
+## Trazabilidad
+
+- Issue: #5
+- Pull Request: #10
+
 ## Tabla de Contenidos
 
 - [Requisitos](#requisitos)
+  - [Trazabilidad](#trazabilidad)
   - [Tabla de Contenidos](#tabla-de-contenidos)
   - [Contexto](#contexto)
   - [Glosario](#glosario)
@@ -34,7 +40,6 @@ El presente documento sirve como un índice de los requisitos del sistema inform
     - [Módulo de Pedidos](#módulo-de-pedidos)
   - [Requisitos No Funcionales](#requisitos-no-funcionales)
   - [Identificación y Versionamiento de Requisitos](#identificación-y-versionamiento-de-requisitos)
-  - [Trazabilidad](#trazabilidad)
 
 ## Contexto
 
@@ -202,8 +207,3 @@ El propósito de este módulo es gestionar los pedidos, permitir el registro de 
 4. Todo nuevo requisito empieza con versión v1.0.
 5. Si un requisito con versión vx.y sufre una modificación leve de contenido, su versión cambia a vx.[y + 1], por ejemplo de v1.0 a v1.1.
 6. Si un requisito con versión vx.y sufre una modificación completa de contenido, su versión cambia a v[x + 1].y, por ejemplo de v1.0 a v2.0.
-
-## Trazabilidad
-
-- Issue: #5
-- Pull Request: #10
