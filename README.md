@@ -5,12 +5,12 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-4169E1?logo=postgresql&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)
 ![Maven](https://img.shields.io/badge/Maven-Build-C71A36?logo=apachemaven)
-![SonarQube](https://img.shields.io/badge/SonarQube-Analysis-4E9BCD?logo=sonarqube)
 
 Sistema web para la gestión de pedidos de una cafetería universitaria. Permite consultar el menú, registrar pedidos anticipados, generar códigos únicos de retiro y realizar el seguimiento de los pedidos desde su recepción hasta su entrega, facilitando la atención a clientes y la gestión del personal de cafetería.
 
 ## Entregables
 
+* [Código fuente](./code/)
 * [Documentación de Requisitos](./docs/requisitos/)
 * [Documentación de Diseño](./docs/modelado/)
 * [Documentación de Ambiente](./DEVELOP.md)
@@ -39,6 +39,7 @@ Cafesysto/
 |   |       ├── java/                           # Código de pruebas automatizadas del backend Springboot Java
 |   |       └── js/                             # Código de pruebas automatizadas del frontend Javascript
 |   ├── .dockerignore                           # Configuración de Docker
+|   ├── .env-example                            # Ejemplo de archivo .env para variables de entorno
 |   ├── Dockerfile                              # Archivo para crear el contenedor Docker
 |   ├── docker-compose.yml                      # Configuración de Docker Compose
 |   ├── mvnw                                    # Comando de Maven Wrapper
@@ -77,7 +78,6 @@ Cafesysto/
 |   |   ├── EJEMPLO_REQUISITO_NO_FUNCIONAL.md   # Plantilla para requisitos no funcionales
 |   |   └── REQUISITOS.md                       # Plantilla para diagramas de clases
 |   └── MATRIZ_TRAZABILIDAD.md                  # Matriz de trazabilidad
-├── .env-example                                # Ejemplo de archivo .env para variables de entorno
 ├── .gitattributes                              # Configuración de git nativa
 ├── .gitignore                                  # Archivos y carpetas no incluidos (binarios, configuración de IDE, módulos de NodeJS, variables de entorno)
 ├── CONTRIBUTING.md                             # Documentación de flujo de trabajo
