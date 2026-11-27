@@ -10,11 +10,12 @@ v1.0
 
 ## Trazabilidad
 
-**Historia de Usuario:** RFU-02
-**Issue:** #34
-**Pull Request:** Pendiente
+- Historia de Usuario: RFU-02
+- Issue: #34
+- Pull Request: #41
 
 **Criterio(s) de aceptación relacionado(s):**
+
 - El sistema solicita las credenciales del Cliente (correo institucional y contraseña).
 - Si las credenciales son correctas, el sistema permite el acceso.
 - Si las credenciales son incorrectas o el usuario no existe, el sistema muestra un mensaje de error genérico sin revelar cuál dato falló.

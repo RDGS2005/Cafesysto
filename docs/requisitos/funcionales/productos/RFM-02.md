@@ -19,7 +19,7 @@ v1.0
 - Origen: RU-06
 - Issue: #2
 - Pull Request: #8
-- Casos de prueba: Pendiente
+- Casos de prueba: CPM-01
 
 ## Criterios de aceptación
 
@@ -32,7 +32,7 @@ v1.0
 
 ## Reglas de negocio relacionadas
 
-- RN-NEG-02: El sistema debe exponer los productos y sus precios.
+- RN-02: El sistema debe exponer los productos y sus precios.
 - Solo el personal de la cafetería puede registrar productos en el menú.
 - Todo producto nuevo debe tener un precio asignado para poder ser guardado.
 - Cada producto tiene un código único que no se puede modificar.

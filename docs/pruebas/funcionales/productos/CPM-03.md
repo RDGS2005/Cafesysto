@@ -10,9 +10,9 @@ v1.0
 
 ## Trazabilidad
 
-**Historia de Usuario:** RFM-03-1
-**Issue:** #35
-**Pull Request:** Pendiente
+- Historia de Usuario: RFM-03-1
+- Issue: #35
+- Pull Request: #40
 
 **Criterio(s) de aceptación relacionado(s):**
 - El sistema permite seleccionar un producto existente del menú para su edición.

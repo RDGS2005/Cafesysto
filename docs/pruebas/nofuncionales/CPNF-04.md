@@ -17,9 +17,10 @@ v1.0
 
 - Requisito no funcional: RNF-06
 - Issue: #37
-- Pull Request: Pendiente
+- Pull Request: #42
 
 **Criterio(s) de aceptación relacionado(s):**
+
 - Métrica *Line Coverage* igual o superior al 80 %
 
 ## Procedimiento de prueba

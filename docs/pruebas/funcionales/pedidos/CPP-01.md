@@ -10,11 +10,12 @@ v1.0
 
 ## Trazabilidad
 
-**Historia de Usuario:** RFP-01
-**Issue:** #36
-**Pull Request:** Pendiente
+- Historia de Usuario: RFP-01
+- Issue: #36
+- Pull Request: #39
 
 **Criterio(s) de aceptación relacionado(s):**
+
 - Al seleccionar un producto disponible, este aparece en la selección del cliente.
 - Si un producto está marcado como no disponible, el cliente no puede añadirlo a la selección.
 - Al indicar la cantidad de un producto seleccionado, el sistema la muestra junto a ese producto.

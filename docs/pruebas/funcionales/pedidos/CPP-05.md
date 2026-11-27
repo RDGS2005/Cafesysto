@@ -10,11 +10,12 @@ v1.0
 
 ## Trazabilidad
 
-**Historia de Usuario:** RFP-05-1
-**Issue:** #36
-**Pull Request:** Pendiente
+- Historia de Usuario: RFP-05-1
+- Issue: #36
+- Pull Request: #39
 
 **Criterio(s) de aceptación relacionado(s):**
+
 - El personal puede consultar los pedidos e identificar cuáles están Pendientes.
 - Al consultar un pedido, el personal puede ver el código de retiro asociado a ese pedido.
 

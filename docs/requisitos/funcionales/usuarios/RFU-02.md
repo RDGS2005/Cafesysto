@@ -19,7 +19,7 @@ v2.0
 - Origen: Equipo 6
 - Issue: #1
 - Pull Request: #9
-- Casos de prueba: Pendiente
+- Casos de prueba: CPU-02
 
 ## Criterios de aceptación
 

@@ -10,11 +10,12 @@ v1.0
 
 ## Trazabilidad
 
-**Historia de Usuario:** RFU-06
-**Issue:** #34
-**Pull Request:** Pendiente
+- Historia de Usuario: RFU-06
+- Issue: #34
+- Pull Request: #41
 
 **Criterio(s) de aceptación relacionado(s):**
+
 - El sistema solicita la contraseña actual; si no coincide, rechaza el cambio, informa el motivo y no modifica nada.
 - La nueva contraseña debe ingresarse dos veces; si ambas no coinciden, el sistema informa el motivo y no realiza el cambio.
 - La nueva contraseña debe ser distinta de la contraseña actual.

@@ -10,11 +10,12 @@ v1.0
 
 ## Trazabilidad
 
-**Historia de Usuario:** RFP-04
-**Issue:** #36
-**Pull Request:** Pendiente
+- Historia de Usuario: RFP-04
+- Issue: #36
+- Pull Request: #39
 
 **Criterio(s) de aceptación relacionado(s):**
+
 - Al consultar uno de sus pedidos confirmados, el cliente ve el último estado registrado para ese pedido.
 
 ## Precondiciones

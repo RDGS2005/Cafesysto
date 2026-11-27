@@ -17,9 +17,10 @@ v1.0
 
 - Requisito no funcional: RNF-02
 - Issue: #37
-- Pull Request: Pendiente
+- Pull Request: #42
 
 **Criterio(s) de aceptación relacionado(s):**
+
 - Tiempo transcurrido desde la solicitud de información del pedido hasta que la información se encuentre disponible en la interfaz menor a 2 segundos
 
 ## Procedimiento de prueba

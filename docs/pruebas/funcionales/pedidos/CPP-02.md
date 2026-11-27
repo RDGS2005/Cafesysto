@@ -10,11 +10,12 @@ v1.0
 
 ## Trazabilidad
 
-**Historia de Usuario:** RFP-02
-**Issue:** #36
-**Pull Request:** Pendiente
+- Historia de Usuario: RFP-02
+- Issue: #36
+- Pull Request: #39
 
 **Criterio(s) de aceptación relacionado(s):**
+
 - Al revisar una selección válida, el cliente ve el importe total antes de confirmar el pedido.
 - El importe mostrado es la suma del precio vigente de cada producto seleccionado multiplicado por su cantidad.
 

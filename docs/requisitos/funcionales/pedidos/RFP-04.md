@@ -19,7 +19,7 @@ v1.0
 - Origen: RU-05
 - Issue: #4
 - Pull Request: #7
-- Casos de prueba: Pendiente
+- Casos de prueba: CPP-04
 
 ## Criterios de aceptación
 

@@ -13,7 +13,7 @@ v1.0
 - Origen: Equipo 6
 - Issue: #3
 - Pull Request: #6
-- Casos de prueba: Pendiente 
+- Casos de prueba: CPNF-02
 
 ## Categoría
 

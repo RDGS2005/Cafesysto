@@ -10,11 +10,12 @@ v1.0
 
 ## Trazabilidad
 
-**Historia de Usuario:** RFP-03
-**Issue:** #36
-**Pull Request:** Pendiente
+- Historia de Usuario: RFP-03
+- Issue: #36
+- Pull Request: #39
 
 **Criterio(s) de aceptación relacionado(s):**
+
 - Al revisar el resumen, el pedido todavía no se registra.
 - Al confirmar una selección válida, el pedido se registra en estado Pendiente.
 - El cliente recibe el resumen del pedido y un código de retiro único.
