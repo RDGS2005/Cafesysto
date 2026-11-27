@@ -3,7 +3,9 @@
 **Versión:** v1.0 <br>
 **Autor:** Equipo 6 <br>
 
+## Tabla de Contenidos
 - [Manual de Usuario](#manual-de-usuario)
+  - [Tabla de Contenidos](#tabla-de-contenidos)
   - [1. Cliente](#1-cliente)
     - [1.1. ¿Cómo registrarse?](#11-cómo-registrarse)
     - [1.2. ¿Cómo iniciar sesión?](#12-cómo-iniciar-sesión)
