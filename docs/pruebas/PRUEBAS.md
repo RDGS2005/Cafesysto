@@ -5,9 +5,15 @@
 
 El presente documento sirve como un índice de los casos de prueba del sistema informático para la gestión de pedidos de la cafetería universitaria. Su propósito es demostrar las funcionalidades y cualidades del sistema para facilitar la consulta del menú, el registro de pedidos anticipados y el seguimiento de estos hasta su entrega.
 
+## Trazabilidad
+
+- Issue: #38
+- Pull Request: #43
+
 ## Tabla de Contenidos
 
 - [Pruebas](#pruebas)
+  - [Trazabilidad](#trazabilidad)
   - [Tabla de Contenidos](#tabla-de-contenidos)
   - [Casos de Prueba Funcionales](#casos-de-prueba-funcionales)
     - [Módulo de Usuarios](#módulo-de-usuarios)
